@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Affiche arbre{% endblock %}
+{% block css %}{% endblock %}
+{% block content %}
+{% load filtertags %}
+<div id="conteneur2" >
+ <br>
+ <p class="title"> Les professions de nos ancêtres.</p>
+ <br><br><br><br><br><br>
+ <p class="lienprof"><a href="listemetiers"> Liste des professions rencontrées dans cet arbre</a>
+  </p><br> <br>
+ <p class="lienprof"><a href="profcamp"> Un essai d'explication de la hiérarchie des professions liées à l'agriculture</a>
+ </p>
+ <br> <br> <br> <br>
+ <table width="100%">
+ <td align="center">
+ <img src="/static/img/lessive.jpg" align="center">
+ <img src="/static/img/chiffon.jpeg" align="center">
+ </td>
+ </table>
+ </div>
+{% endblock %}

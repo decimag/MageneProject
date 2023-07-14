@@ -1,0 +1,65 @@
+    img.btn {
+   	
+   border:0px; 
+   
+}
+/*police du titre de la branche*/
+p.branche {
+text-align: center;
+font-size:20px;
+color: #6d6d6d;
+font-weight:bold;
+
+
+}
+p.branche2 {
+font-size:14px;
+color: #6d6d6d;
+font-weight:bold;
+text-decoration: underline;
+}
+font.info{
+font-size:12px;
+color: #6d6d6d;
+}
+
+ .boite { /* d�inition de la boite 1 */
+ position:absolute ;  /* positionne la boite dans l'�ran */ 
+   top:0 ; /* �80 pixels du haut de page */
+/*  left:0 ;  et 30% du bord gauche de la page */
+    height:100%;
+    width:90%;
+    } /* bordure de la boite */
+.MAN_HEAD_1 {font-size:12pt ;color:#6d6d6d;padding:2px}
+.MAN_LABEL_1 {font-weight:bold;font-size:12pt ;color:#6d6d6d}
+.WOMAN_HEAD_1 {font-size:12pt ;color:#FF0099}
+.WOMAN_LABEL_1 {font-size:12pt ;font-weight:bold ;color:#FF0099}
+.MAR_1 {color:#16bc33;font-weight:bold ;font-size:12pt } 
+.MAN_HEAD_2 {color:#6d6d6d;font-size:8pt ;padding:2px }
+.MAN_LABEL_2 {font-weight:bold ;font-size:8pt ;color:#6d6d6d}
+.WOMAN_HEAD_2 {font-size:8pt ;color:#FF0099}
+.WOMAN_LABEL_2 {font-weight:bold ;font-size:8pt ;color:#FF0099}
+.MAR_2 {color:#16bc33;font-weight:bold ;font-size:8pt} 
+.MAN_HEAD_3 {font-size:6pt ;color:#6d6d6d ;padding:2px }
+.MAN_LABEL_3 {font-weight:bold ;font-size:6pt ;color:#6d6d6d}
+.WOMAN_HEAD_3 {font-size:6pt ;color:#FF0099}
+.WOMAN_LABEL_3 {font-weight:bold ;font-size:6pt ;color:#FF0099}
+.MAR_3 {color:#16bc33 ;font-weight:bold ;font-size:6pt} 
+
+a {
+	color: blue;
+}
+
+a.whitewine {
+	color: #16bc33;
+	font-weight:bold;
+
+}
+a.white {
+	color: #16bc33;
+	
+
+}
+a.redwine {
+	color: #6d6d6d;	
+}

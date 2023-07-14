@@ -1,0 +1,34 @@
+
+    img.btn {
+   	
+   border:0px; 
+   
+}
+p.title {
+text-align: center;
+margin:0% ;
+font-size:25px;
+font-style: italic;
+color:#16bc33;
+}
+#picture{
+float:left;
+margin-right: 50px;
+margin-left: 30px;
+}	
+p.celebnom {
+text-align: center;
+font-weight: bold;
+color:#16bc33;
+}
+p.celebind {
+text-indent: 70px;
+margin-left: 50px;
+color:#6d6d6d;
+}
+p.celebcita {
+text-indent: 70px;
+margin-left: 50px;
+font-style: italic;
+color:#6d6d6d;
+}

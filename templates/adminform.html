@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Affiche arbre{% endblock %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/prof.css" />
+{% endblock %}
+{% block content %}
+<form action="adminform" method="get">
+    <input type="submit" value="Update AgeMar" name="AgeMar"/>
+</form>
+{{ Ret }}
+{% endblock %}

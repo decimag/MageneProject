@@ -1,0 +1,93 @@
+html, body{
+		    height:100%;
+        width:100%; 
+	      //règle les marges
+				margin-left:0px;
+				margin-top:0px;
+				margin-right:0px;
+				margin-bottom:0px;
+			  overflow:hidden;
+		}
+		
+		div#conteneur
+		{
+			 width: 100px;
+			 height: 100%; 
+			 position:absolute;
+			 left:0px;
+		   background-image: url("test6ap.gif");
+       background-repeat:repeat-y;
+        overflow-y:auto;
+		}
+		div#conteneur2
+		{
+			 background-image: url("couleurs.jpg");
+			 height: 100%; 
+		   top:0px;			
+			 left : 100px;
+			 right:0px;
+			 position:absolute;
+			 overflow:-Moz-Scrollbars-vertical;
+ 		   overflow-x:auto;
+ 		   overflow-y:scroll;
+    }
+    
+	div#im1{
+      position:relative;
+      top: 70px;
+      height: 35px;
+      width:100%;
+    }
+  div#im2{
+      position:relative;
+      top: 105px;
+      height: 35px;
+      width:100%;
+    }
+  div#im3{
+      position:relative;
+      top: 140px;
+      height: 35px;
+      width:100%;
+    }
+  div#im4{
+      position:relative;
+      top: 175px;
+      height: 35px;
+      width:100%;
+    }
+    div#im5{
+      position:relative;
+      top: 210px;
+      height: 35px;
+      width:100%;
+    }
+    div#im6{
+      position:relative;
+      top: 245px;
+      height: 35px;
+      width:100%;
+    }
+    div#im7{
+      position:relative;
+      top: 280px;
+      height: 35px;
+      width:100%;
+    }
+    div#im8{
+      position:relative;
+      top: 315px;
+      height: 35px;
+      width:100%;
+    }
+    div#im9{
+      position:relative;
+      top: 350px;
+      height: 35px;
+      width:100%;
+    }
+    img.btn {
+   	
+   border:0px; 
+   
+}

@@ -1,0 +1,94 @@
+
+/*définit la police des lettres*/
+p.lettre {
+text-align: center;
+margin:0% ;
+font-size: 30px;
+}
+/*définit la police des libellés métiers*/
+p.lib {
+margin-left:12%;
+font-weight: bold;
+font-style: italic;
+color:#A52A2A;
+}
+/*définit la police du texte informatif ex : Occurence...*/
+p.inf {
+text-indent: 70px;
+margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	color:green;
+
+}
+/*définit la positiondes éléments Occurence,siecle,dpt*/
+#column1 {
+	position:relative;
+	width: 50%;
+	margin-left:12%;
+}
+
+
+/*définit le début d'où commence la définition*/
+#Def {
+//	clear:both;
+	margin-left:12%;
+}
+/*définit la police de la définition*/
+p.defpol {
+font-family:"georgia";
+ 
+margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left:0px;
+}
+/*définit la police de la liste de lettres*/
+p.ls {
+text-align: center;
+margin:0% ;
+font-size:20px;
+
+}
+/*définit la police du titre*/
+p.title {
+text-align: center;
+margin:0% ;
+font-size:25px;
+font-style: italic;
+}
+/*définit police des titre page acc prof*/
+p.title {
+text-align: center;
+margin:0% ;
+font-weight: bold;
+color:#16bc33;
+font-size:25px;
+font-style: italic;
+}
+/*définit police page acc prof liens*/
+p.lienprof {
+text-align: center;
+margin:0% ;
+font-size:20px;
+	color: green ;
+}
+p.texteprof {
+text-indent: 70px;
+margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 50px;
+font-size:15px;
+
+}
+p.src {
+font-weight: bold;
+font-size:10px;
+font-style: italic;
+}
+p.gen {
+ color:#16bc33;
+
+}

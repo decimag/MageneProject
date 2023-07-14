@@ -1,0 +1,40 @@
+
+    img.btn {
+   	
+   border:0px; 
+   
+}
+/*indique le font pour le texte*/
+font.gen {
+color:#6d6d6d;
+font-weight:bold;
+}
+/*indique la police pour le texte*/
+p.gen{
+text-align:left;
+
+}
+/*centre le formulaire dans la page*/
+#form{
+position:relative;
+top:200px;
+left:200px;
+width:400px;
+}
+font.cousacc {
+color:#6d6d6d;
+font-weight:bold;
+font-style: italic;
+}
+TD.process { background-image:url("test6ap.gif"); background-repeat:repeat; }
+p.liencous {
+text-align: center;
+margin:0% ;
+font-size:20px;
+color:#6d6d6d;
+	
+}
+a.lien{
+
+color:#16bc33;
+}

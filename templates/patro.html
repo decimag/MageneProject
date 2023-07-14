@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+{% load filtertags %}
+<div style="text-align:center">
+{% for letter in letter_list %}
+      <a href="patro?letter={{letter}}" class="whitewine">{{letter}}</a>
+{% endfor %}
+</div>
+    <BR><BR><BR><BR>
+<TABLE align="CENTER" valign="middle"><TR>
+    {% for nom in toto %}
+        {% if forloop.counter|modulo:4 %}
+            <TD> <a href="affBranche?patro={{ nom.NOM }}" class="redwine">{{ nom.NOM }} </a> </TD>
+            {% else %}
+            <TD> <a href="affBranche?patro={{ nom.NOM }}" class="redwine">{{ nom.NOM }} </a> </TD> </TD>
+              </TR>
+
+        {% endif %}
+    {% endfor %}
+</TABLE>
+{% endblock %}

@@ -1,0 +1,40 @@
+/* CSS Document */
+
+    img.btn {
+   	
+   border:0px; 
+   
+}
+
+span.cousacc {
+    color:#6d6d6d;
+	font-weight:bold;
+	font-style: italic;
+}
+#boitecousin{
+	position:relative;
+	top: 10%;
+	left:5%;
+	width: 90%; 
+	height:80%;
+}
+TD.process { background-color:#747064; }
+p.liencous {
+text-align: center;
+margin:0% ;
+font-size:20px;
+	color:#16bc33;
+text-decoration:underline;
+}
+a.lien{
+color:#16bc33;
+}
+td.gen {
+border-style:solid; 
+border-width:1px; 
+border-color:black;
+}
+p.quatre {
+text-align: center;
+font-size:12px;
+}

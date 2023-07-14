@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Affiche arbre{% endblock %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/prof.css" />
+{% endblock %}
+{% block content %}
+{% load filtertags %}
+    <p class="ls">
+{% for lettre in listelettre %}
+              &nbsp;<a href="listemetiers#{{ lettre.LETTRE }}"> {{ lettre.LETTRE }} </a>
+            {% endfor %}
+    </p>
+    {% for lettre in listelettre %}
+         <p class='lettre'><BR><A name="{{ lettre.LETTRE }}">  {{ lettre.LETTRE }} </A><BR></p>
+    {% for metiers in listemetiers %}
+       {% if  lettre.LETTRE ==  metiers.LETTRE %}
+
+         <p class='lib'>{{ metiers.NOMPROF }}</p>
+         <div id="column1">
+         <p class='inf'>
+         <strong>Période : </strong> {{ metiers.PERIODE }}
+         </p>
+         </div>
+         <div id="column1">
+         <p class='inf'>
+         <strong>Occurence : </strong>{{ metiers.OCCURENCE}}
+         </p>
+         </div>
+         <div id="column1">
+         <p class='inf'>
+         <strong> Dpt : </strong>{{ metiers.DEPT}}
+         </p>
+         </div>
+         <div id="Def">
+         <p class='defpol'>
+         {% if  metiers.DEF|slice:"0:13" == 'Voir Les diff' %}
+
+         <BR><strong>Définition : </strong><a href="profcamp"> {{ metiers.DEF}}</a><BR>
+         {% else %}
+                  <BR><strong>Définition : </strong>{{ metiers.DEF}} <BR>
+         {% endif %}
+         </p>
+         </div>
+
+        {% endif %}
+    {% endfor %}
+    {% endfor %}
+{% endblock %}

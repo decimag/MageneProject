@@ -1,0 +1,53 @@
+{% extends "baseCousin.html" %}
+{% block title %}Affiche arbre{% endblock %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/cousacc.css" />
+{% endblock %}
+{% block content %}
+
+     <form action="TabActes"  method="POST">'
+     {% csrf_token %}
+	<br><br>Filtre par le NOM : <select name="NomFiltre" onchange="submit()">
+	 <OPTION value="tous">tous
+       {% for i in listeNoms %}
+              <OPTION value={{ i }}>{{ i }}
+            {% endfor %}
+       </select><br><br>
+     </form>
+       Vous pouvez aider à rendre ce site riche en information et dynamique,
+      notamment en ajoutant en ligne de nouveaux actes en cliquant ici :
+      <a class="lien" href="enractes"><b>Enregistrer de nouveaux actes</b></a><br><br>';
+    <table width='90%' class='gen'><TR>
+    <TD width='10%' class='gen' align='center'>
+<span class='cousacc'>Identifiant</span>
+</TD>
+<TD width='10%' class='gen' align='center'>
+<span class='cousacc'>TYPE</span>
+</TD>
+<TD width='60%' class='gen' align='center'>
+<span class='cousacc'>INTITULE</span>
+</TD>
+<TD width='10%' class='gen' align='center'>
+<span class='cousacc'>DATE</span>
+</TD>
+<TD width='10%' class='gen' align='center'>
+<span class='cousacc'>Consultation</span>
+</TD>
+</TR>
+
+   {% for nom in Actes %}
+<tr>
+            <TD> {{ nom.LOGIN }}</TD>
+       <TD> {{ nom.TYPE }}</TD>
+       <TD> {{ nom.NOM1 }}  {{ nom.PRENOM1 }} & {{ nom.NOM2 }}  {{ nom.PRENOM2 }}</TD>
+  <TD> {{ nom.DATE_ACTE }}</TD>
+       <TD>   <a href="affActes?pathImg={{ nom.IMG_ACTES }}">Voir</a></TD>
+
+
+
+</tr>
+    {% endfor %}
+
+    </table>
+{{ AffichNom }}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Affiche arbre{% endblock %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/cousacc.css" />
+{% endblock %}
+{% block content %}
+  <div id="boitecousin">
+
+	<form method="POST" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="submit"></input>
+    {{ form }}
+  </form>
+     </div>
+
+{% endblock %}

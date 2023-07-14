@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Affiche arbre{% endblock %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/prof.css" />
+{% endblock %}
+{% block content %}
+<form method="GET" novalidate>
+	{% csrf_token %}
+	<h2>Login</h2>
+	{{form.as_p}}
+    {{form2.as_p}}
+	<input type="submit" value="Modifier" name="Change"/><input type="submit" value="Supprimer mon profil" name="Del" />
+
+</form>
+
+{% endblock %}

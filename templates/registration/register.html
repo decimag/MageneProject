@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Affiche arbre{% endblock %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/formUser.css" />
+{% endblock %}
+{% block content %}
+    <h3>Enregistrez vous</h3>
+<form action="register" method="post">
+    {% csrf_token %}
+  <!--  {{ form.as_p }} -->
+    {% for field in form %}
+	<p>
+		{% if field.errors %}
+		<ul class="errorlist">
+			{% for error in field.errors %}
+			<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	 	{{ field.label_tag }}</p><p> {{ field }}
+	</p>
+	{% endfor %}
+    {{ formProfil.as_p }}
+	<input type="submit" value="Register" />
+	<p>Already has an account? <a href="{%url 'loginPlus' %}">Login</a></p>
+
+</form>
+
+{% endblock %}

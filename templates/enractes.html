@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Affiche arbre{% endblock %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/cousacc.css" />
+{% endblock %}
+{% block content %}
+  <div id="boitecousin">
+    <table height="100%" width="100%"  border="1" bgcolor="#747064">
+   <tr>
+         <td height="10%" width="50%" valign="middle" class="process"><p class="liencous">Actes</p></td>
+        <td height="10%" width="50%" valign="middle" class="process"><p class="liencous">Gedcom</p></td>
+     </tr>
+     <tr>
+     <TD height="90%" COLSPAN=6 bgcolor="#d9d9d7" ALIGN="center">
+      <br>
+     {{ DateJ }}
+     {{ Msg }}
+         Enregistrement d'actes :
+            <br><br>
+          Séléctionner le type d'actes  :<br>
+
+        <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!-- {{ form.TYPE }} -->
+           <select name="TYPE" onchange="submit()" >
+           {% if Type == "" %}<OPTION>
+               <OPTION value="MARIAGE">MARIAGE
+               <OPTION value="NAISSANCE">NAISSANCE
+                 <OPTION value="DECES">DECES
+               {% elif Type == "MARIAGE" %}
+                   <OPTION value="MARIAGE" selected>MARIAGE</OPTION>
+                   <OPTION value="NAISSANCE">NAISSANCE
+                     <OPTION value="DECES">DECES
+                {% elif Type == "NAISSANCE" %}
+                   <OPTION value="MARIAGE" >MARIAGE</OPTION>
+                   <OPTION value="NAISSANCE" selected>NAISSANCE
+                   <OPTION value="DECES">DECES
+               {% elif Type == "DECES" %}
+                 <OPTION value="MARIAGE" >MARIAGE</OPTION>
+                   <OPTION value="NAISSANCE" >NAISSANCE
+                   <OPTION value="DECES" selected>DECES
+               {% endif %}
+
+
+          </select>
+           {% if Type == "MARIAGE" %}
+            <br><br><table>
+                        <tr>
+                            <td align="right" width="50%"><font class="cousacc">Nom de l`épouse</font>
+                            {{form.NOM1}}</td>
+                            <td align="right" width="50%"><font class="cousacc">Prénom de l`épouse {{form.PRENOM1}}</td>
+                        </tr>
+	                     <tr>
+                             <td align="right" width="50%"><font class="cousacc">Nom de l`époux</font>{{form.NOM2}}</td>
+                             <td align="right" width="50%"><font class="cousacc">Prénom de l`époux</font>{{form.PRENOM2}}</td>
+                         </tr>
+            </table>
+               {% elif Type == "DECES" or  Type == "NAISSANCE" %}
+               <br><br><table>
+               <tr>
+                            <td align="right" width="50%"><font class="cousacc">Nom </font>
+                            {{form.NOM1}}</td>
+                            <td align="right" width="50%"><font class="cousacc">Prénom {{form.PRENOM1}} </td>
+                        </tr>
+                 </table>
+            {% endif %}
+        {% if Type != "" %}
+        <font class="cousacc">
+           Indiquez la date de l'acte (Ex : 23/10/1872)<br>
+           	{{form.DATE_ACTE}}<br><br>
+           	Si l`acte est en plusieurs parties, sélectionnez le numéro de la partie<br>
+            {{form.NUMPART_ACTE}}
+            <br><br>
+	         Selectionnez votre acte !!<br><br>
+	         Fichier: <br>
+            {{form.IMG_ACTES}}<br>
+            Ou Lien vers un acte sur le web :  <br>
+            {{form.LINKACTE}}<br><br>
+             <input id="DATE" name="DATE" type="hidden" value={{ DateJ }}>
+             <input id="LOGIN" name="LOGIN" type="hidden" value={{ UserName }}>
+             <input type="submit">
+        </font>
+        {% endif %}
+          </form>
+    	</td>
+	</tr>
+
+	</table>
+
+     </div>
+
+{% endblock %}

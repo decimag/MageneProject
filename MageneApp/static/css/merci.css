@@ -1,0 +1,15 @@
+/* CSS Document */
+
+p.title {
+text-align: center;
+margin:0% ;
+font-size:25px;
+font-style: italic;
+color:#16bc33;
+}
+P.ind {
+color:#6d6d6d;
+text-indent:30px;
+margin-left:20px;
+margin-right:20px;
+}

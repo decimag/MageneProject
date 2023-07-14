@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Affiche branche{% endblock %}
+{% block content %}
+{% for nom in html %}
+
+     {% if  nom.0|length ==  2 %}
+             <p class="branche2">Branche {{ nom.0 }}</p>
+           {% endif %}
+            {% for i in nom.0|slice:"2:"|make_list %}
+              &nbsp;
+            {% endfor %}
+          <a class="white" href="affArbre?CODEF={{ nom.4 }}"> {{ nom.1 }}</a>{{ nom.2 }}{{ nom.3 }}
+    <br>
+{% endfor %}
+
+
+
+{% endblock %}

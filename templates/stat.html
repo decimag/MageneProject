@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% block title %}Affiche arbre{% endblock %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/stat.css" />
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcE97tpjqc7GHZfz7bGo_zrDfgbPExIkE&callback=initMap"
+  type="text/javascript"></script>
+   <script type="text/javascript">
+  function initialize(Lat,Lng) {
+    var latlng = new google.maps.LatLng(44.383333, 4.983333);
+    var Chatlatlng = new google.maps.LatLng(46.81, 1.69);
+    var myOptions = {
+      zoom: 5,
+      center: Chatlatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var image = "/static/img/testrond4.gif";
+
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+  }
+   function initialize2(Lat,Lng) {
+    var latlng = new google.maps.LatLng(Lat, Lng);
+    var Chatlatlng = new google.maps.LatLng(46.81, 1.69);
+    var myOptions = {
+      zoom: 11,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var image = "/static/img/testrond4.gif";
+
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+
+  }
+
+</script>
+
+
+{% endblock %}
+{% block js %}onload="initialize()"{% endblock %}
+{% block content %}
+{% load filtertags %}
+<div id="conteneur2" >
+ <div id="rect1">
+    <h2 align="center"> <em><font color="#6d6d6d"><strong>STATISTIQUES</strong> </font></em></h2>
+
+
+
+            <p align="center"><a href="#ancre3">Top 10 des patronymes les plus représentés</a></P>
+            <p align="center"><a href="#ancre4">Top 10 des communes les plus représentées</a></P>
+            <p align="center"><a href="#ancre1">Age moyen au mariage</a></P>
+            <p align="center"><a href="#ancre2">Espérance de vie</a></P>
+            <p align="center"><a href="#ancrePr">Professions</a></P>
+
+           </div>
+
+           <br>
+           <br>
+  <hr>
+            <CENTER><table width=600  class="tablomenu">
+                   {% for patroi in Patro %}
+                            <tr height="20px">
+                                <td align="left" width="30%" margin=0>{{ patroi.NOM }}</td>
+
+                                <td align="LEFT" width="70%"> <img src="/static/img/rect.gif" width="{{ patroi.OCCURENCE|addval:20 }}" height="20">  {{ patroi.OCCURENCE }}</td></tr>
+
+                   {% endfor %}
+            </table>
+</CENTER>
+<br><br><hr><A name="ancre4"><h3 align="center">
+     <font color="#6d6d6d">
+     <strong>TOP 10 DES COMMUNES (Nb total d'occurence)</strong>
+     <br></font></h3></A><div id="TbGauche">
+     <table width=600  class="tablomenu">
+         {% for lieux in Lieux %}
+                            <tr height="20px">
+                                <td align="left" width="30%" margin=0>
+                                    <a href="#ancre4" onMouseOver="initialize2({{ lieux.LATTITUDE }},{{ lieux.LONGITUDE }})"> {{ lieux.COMMUNE }}</a>
+                                </td>
+
+                                <td align="LEFT" width="70%"> <img src="/static/img/rect.gif" width="{{ lieux.OCCURENCE|addsqrtval:20 }}" height="20">  {{ lieux.OCCURENCE }}</td></tr>
+                             </tr>
+                   {% endfor %}
+          </table>
+                </div>
+<br><h3 align="center">
+     <font color="#6d6d6d">LOCALISATION</strong> </font></h3>
+     <h5 align="center"><font color="#6d6d6d"><strong>Passer la souris sur le nom d'une commune ci-dessus pour la localiser</strong>
+     </font></h5>
+<div id="map_canvas"></div>
+<br>
+ <div id="reste">
+
+            <font color="#6d6d6d">
+            <hr>
+
+
+            <P align="center"><A name="ancre1"><B>AGE MOYEN AU MARIAGE</B></A></P>
+
+
+            <P align="center">Les statistiques sont données pour un éhantillon  d au moins 30 individus</P>
+
+
+
+            <P align="center">
+              <CENTER><table WIDTH=600  class="tablograph">"
+              {% for Agemari in Agemar %}
+                 {% if Agemari.GENRE == 'F' %}
+                      <tr height="20px">
+                        <td align="left" width="50%" margin=0  style="color: #f449e6">Femmes (Siecle={{  Agemari.SIECLE }} eme)</td>
+                        <td align="LEFT" width="50%" style="color: #f449e6"> <img src="/static/img/femmes.gif" width="{{ Agemari.AGEMOYEN|addtrestval:20 }}" height="20"> {{ Agemari.AGEMOYEN }}</td>
+                      </tr>
+                  {% else %}
+<tr height="20px">
+                        <td align="left" width="50%" margin=0  style="color: blue">Femmes (Siecle={{  Agemari.SIECLE }} eme)</td>
+                        <td align="LEFT" width="50%" style="color: blue"> <img src="/static/img/hommes.gif" width="{{ Agemari.AGEMOYEN|addtrestval:20 }}" height="20"> {{ Agemari.AGEMOYEN }}</td>
+                      </tr>
+                 {%  endif %}
+               {%  endfor %}
+                </table>
+            <font color="#6d6d6d">
+            <hr>
+             <br>
+            <P align="center"><a name=ancre2><b>ESPERANCE DE VIE</b></a></P>
+            <P align="center">Les statistiques sont données pour un éhantillon  d au moins 30 individus</P>
+
+
+            <P align="center">
+            <CENTER><table WIDTH=600  class="tablograph">"
+              {% for Espviei in Espvie %}
+                 {% if Espviei.GENRE == 'F' %}
+                      <tr height="20px">
+                        <td align="left" width="50%" margin=0  style="color: #f449e6">Femmes (Siecle={{  Espviei.SIECLE }} eme)</td>
+                        <td align="LEFT" width="50%" style="color: #f449e6"> <img src="/static/img/femmes.gif" width="{{ Espviei.ESPVIEMOYEN|addtrestval:20 }}" height="20"> {{ Espviei.ESPVIEMOYEN }}</td>
+                      </tr>
+                  {% else %}
+<tr height="20px">
+                        <td align="left" width="50%" margin=0  style="color: blue">Femmes (Siecle={{  Espviei.SIECLE }} eme)</td>
+                        <td align="LEFT" width="50%" style="color: blue"> <img src="/static/img/hommes.gif" width="{{ Espviei.ESPVIEMOYEN|addtrestval:20 }}" height="20"> {{ Espviei.ESPVIEMOYEN }}</td>
+                      </tr>
+                 {%  endif %}
+               {%  endfor %}
+                </table>
+            <hr>
+            <font color="#6d6d6d">
+            <P align="center"><a name=ancrePr><b>PROFESSIONS</b></a></P><br><br>
+            <P align="center">Les professions ont été regroupées par catégories professionnelles</P><br>
+            <P align="center">
+            <img src="/static/img/GrProf.gif" align="middle">
+            </p>
+           </div>
+</div>
+{% endblock %}

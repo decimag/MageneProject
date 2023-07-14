@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+{% block title %}Affiche arbre{% endblock %}
+{% block css %}{% endblock %}
+{% block content %}
+{% load filtertags %}
+    ? : <I>les <img  src="/static/img/fleche3.gif" border="0" ></img> servent à changer de générations et un survol de <img  src="/static/img/INFO.gif" width="16" height="16" border="0" ></img> indique la source</I>
+<!-- -------------------------------
+  Géneration 3
+-->
+    <TABLE width="100%" height="100%" border="0">
+<TR width="100%" >
+<TD  align="right" WIDTH="9%" >
+<SPAN class="MAN_HEAD_3">
+{{ Male.3.NOM|nonestr }}
+    {% if CodeF.3 > 0 %}
+    <a href="affArbre?CODEF={{ CodeF.3 }}">  <img  src="/static/img/fleche3.gif" border="0" /></a><BR>
+    {% endif %}
+    <BR>{{ Male.3.PRENOM|nonestr }}<BR>Né le {{ Male.3.DATEN|nonestr }}<BR>à({{ Male.3.COMMUNEN|nonestr }})<BR>Décédé le {{ Male.3.DATED|nonestr }}<BR>à({{ Male.3.COMMUNED|nonestr }})
+</TD>
+    <TD  align="center" WIDTH="7%" >
+<SPAN class="MAR_3">
+</TD>
+<TD  align="left" WIDTH="9%" >
+<SPAN class="WOMAN_HEAD_3">
+{{ Femelle.3.NOM|nonestr }}
+      {% if CodeFF.3 > 0 %}
+    <a href="affArbre?CODEF={{ CodeFF.3 }}">  <img  src="/static/img/fleche3.gif" border="0" /></a><BR>
+    {% endif %}
+    <BR>{{ Femelle.3.PRENOM|nonestr }}<BR>Né le {{ Femelle.3.DATEN|nonestr }}<BR>à({{ Femelle.3.COMMUNEN|nonestr }})<BR>Décédé le {{ Femelle.3.DATED|nonestr }}<BR>à({{ Femelle.3.COMMUNED|nonestr }})
+</TD>
+<TD  align="right" WIDTH="9%" >
+<SPAN class="MAN_HEAD_3">
+{{ Male.4.NOM|nonestr }}
+    {% if CodeF.4 > 0 %}
+    <a href="affArbre?CODEF={{ CodeF.4 }}">
+            <img  src="/static/img/fleche3.gif" border="0" />
+            </a><BR>
+    {% endif %}
+    <BR>{{ Male.4.PRENOM|nonestr }}<BR>Né le {{ Male.4.DATEN|nonestr }}<BR>à({{ Male.4.COMMUNEN|nonestr }})<BR>Décédé le {{ Male.4.DATED|nonestr }}<BR>à({{ Male.4.COMMUNED|nonestr }})</TD>
+
+<TD   align="center" WIDTH="7%" >
+<SPAN class="MAR_3">
+</TD>
+<TD  align="left" WIDTH="9%" >
+<SPAN class="WOMAN_HEAD_3">
+{{ Femelle.4.NOM|nonestr }}
+    {% if CodeFF.4 > 0 %}
+    <a href="affArbre?CODEF={{ CodeFF.4 }}">  <img  src="/static/img/fleche3.gif" border="0" /></a><BR>
+    {% endif %}
+    <BR>{{ Femelle.4.PRENOM|nonestr }}<BR>Né le {{ Femelle.4.DATEN|nonestr }}<BR>à({{ Femelle.4.COMMUNEN|nonestr }})<BR>Décédé le {{ Femelle.4.DATED|nonestr }}<BR>à({{ Femelle.4.COMMUNED|nonestr }})</TD>
+
+<TD  align="right" WIDTH="9%" >
+<SPAN class="MAN_HEAD_3">
+{{ Male.5.NOM|nonestr }}
+    {% if CodeF.5 > 0 %}
+    <a href="affArbre?CODEF={{ CodeF.5 }}">
+            <img  src="/static/img/fleche3.gif" border="0" />
+            </a><BR>
+    {% endif %}<BR>{{ Male.5.PRENOM|nonestr }}<BR>Né le {{ Male.5.DATEN|nonestr }}<BR>à({{ Male.5.COMMUNEN|nonestr }})<BR>Décédé le {{ Male.5.DATED|nonestr }}<BR>à({{ Male.5.COMMUNED|nonestr }})</TD>
+
+<TD  align="center" WIDTH="7%" >
+<SPAN class="MAR_3">
+</TD>
+<TD  align="left" WIDTH="9%" >
+<SPAN class="WOMAN_HEAD_3">
+{{ Femelle.5.NOM|nonestr }}
+    {% if CodeFF.5 > 0 %}
+    <a href="affArbre?CODEF={{ CodeFF.5 }}">  <img  src="/static/img/fleche3.gif" border="0" /></a><BR>
+    {% endif %}
+    <BR>{{ Femelle.5.PRENOM|nonestr }}<BR>Né le {{ Femelle.5.DATEN|nonestr }}<BR>à({{ Femelle.5.COMMUNEN|nonestr }})<BR>Décédé le {{ Femelle.5.DATED|nonestr }}<BR>à({{ Femelle.5.COMMUNED|nonestr }})</TD>
+
+<TD  align="right" WIDTH="9%" >
+<SPAN class="MAN_HEAD_3">
+{{ Male.6.NOM|nonestr }}
+    {% if CodeF.6 > 0 %}
+    <a href="affArbre?CODEF={{ CodeF.6 }}">
+            <img  src="/static/img/fleche3.gif" border="0" />
+            </a><BR>
+    {% endif %}
+    <BR>{{ Male.6.PRENOM|nonestr }}<BR>Né le {{ Male.6.DATEN|nonestr }}<BR>à({{ Male.6.COMMUNEN|nonestr }})<BR>Décédé le {{ Male.6.DATED|nonestr }}<BR>à({{ Male.6.COMMUNED|nonestr }})</TD>
+
+<TD   align="center" WIDTH="7%" >
+<SPAN class="MAR_3">
+</TD>
+<TD  align="left" WIDTH="9%" >
+<SPAN class="WOMAN_HEAD_3">
+{{ Femelle.6.NOM|nonestr }}
+    {% if CodeFF.6 > 0 %}
+    <a href="affArbre?CODEF={{ CodeFF.6 }}">  <img  src="/static/img/fleche3.gif" border="0" /></a><BR>
+    {% endif %}
+    <BR>{{ Femelle.6.PRENOM|nonestr }}<BR>Né le {{ Femelle.6.DATEN|nonestr }}<BR>à({{ Femelle.6.COMMUNEN|nonestr }})<BR>Décédé le {{ Femelle.6.DATED|nonestr }}<BR>à({{ Femelle.6.COMMUNED|nonestr }})</TD>
+
+</TR>
+        <!-- Génération 2 -->
+<TR width="100%" >
+<TD  COLSPAN="2"   align="right" WIDTH="17%" >
+<SPAN class="MAN_HEAD_2">
+{{ Male.1.NOM|nonestr }}
+    {% if CodeF.1 > 0 %}
+    <a href="affArbre?CODEF={{ CodeF.1 }}">
+            <img  src="/static/img/fleche2.gif" border="0" />
+            </a><BR>
+    {% endif %}
+    <BR>
+    {{ Male.1.PRENOM|nonestr }}<BR>
+    {% if SRCNM.1.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCNM.1.0.TITRE|nonestr }} {{ SRCNM.1.0.DESCRIPTION|nonestr }}">{% endif %}
+    Né le {{ Male.1.DATEN|nonestr }}<BR>à({{ Male.1.COMMUNEN|nonestr }})<BR>
+    {% if SRCDM.1.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCDM.1.0.TITRE|nonestr }} {{ SRCDM.1.0.DESCRIPTION|nonestr }}">{% endif %}
+    Décédé le {{ Male.1.DATED|nonestr }}<BR>à({{ Male.1.COMMUNED|nonestr }})</TD>
+<TD  COLSPAN="2"   align="center" WIDTH="16%" >
+<SPAN class="MAR_2">
+<BR></TD>
+<TD  COLSPAN="2"  align="left" WIDTH="17%" >
+<SPAN class="WOMAN_HEAD_2">
+{{ Femelle.1.NOM|nonestr }}
+{% if CodeFF.1 > 0 %}
+    <a href="affArbre?CODEF={{ CodeFF.1 }}">  <img  src="/static/img/fleche2.gif" border="0" /></a><BR>
+    {% endif %}
+    <BR>{{ Femelle.1.PRENOM|nonestr }}<BR>
+    {% if SRCNF.1.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCNF.1.0.TITRE|nonestr }} {{ SRCNF.1.0.DESCRIPTION|nonestr }}">{% endif %}
+    Né le {{ Femelle.1.DATEN|nonestr }}<BR>à({{ Femelle.1.COMMUNEN|nonestr }})<BR>
+    {% if SRCDF.1.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCDF.1.0.TITRE|nonestr }} {{ SRCDF.1.0.DESCRIPTION|nonestr }}">{% endif %}
+    Décédé le {{ Femelle.1.DATED|nonestr }}<BR>à({{ Femelle.1.COMMUNED|nonestr }})</TD>
+
+<TD  COLSPAN="2"   align="right" WIDTH="17%" >
+<SPAN class="MAN_HEAD_2">
+{{ Male.2.NOM|nonestr }}
+    {% if CodeF.2 > 0 %}
+    <a href="affArbre?CODEF={{ CodeF.2 }}">
+            <img  src="/static/img/fleche2.gif" border="0" />
+            </a><BR>
+    {% endif %}
+    <BR>{{ Male.2.PRENOM|nonestr }}<BR>
+      {% if SRCNM.2.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCNM.2.0.TITRE|nonestr }} {{ SRCNM.2.0.DESCRIPTION|nonestr }}">{% endif %}
+    Né le {{ Male.2.DATEN|nonestr }}<BR>à({{ Male.2.COMMUNEN|nonestr }})<BR>
+    {% if SRCDM.2.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCDM.2.0.TITRE|nonestr }} {{ SRCDM.2.0.DESCRIPTION|nonestr }}">{% endif %}
+    Décédé le {{ Male.2.DATED|nonestr }}<BR>à({{ Male.2.COMMUNED|nonestr }})</TD>
+<TD  COLSPAN="2"  align="center" WIDTH="16%" >
+<SPAN class="MAR_2">
+20 DEC 1897<BR>Migné( 36800)</TD>
+<TD  COLSPAN="2"   align="left" WIDTH="17%" >
+<SPAN class="WOMAN_HEAD_2">
+{{ Femelle.2.NOM|nonestr }}
+    {% if CodeFF.2 > 0 %}
+    <a href="affArbre?CODEF={{ CodeFF.2 }}">  <img  src="/static/img/fleche2.gif" border="0" /></a><BR>
+    {% endif %}
+    <BR>{{ Femelle.2.PRENOM|nonestr }}<BR>
+     {% if SRCNF.2.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCNF.2.0.TITRE|nonestr }} {{ SRCNF.2.0.DESCRIPTION|nonestr }}">{% endif %}
+    Né le {{ Femelle.2.DATEN|nonestr }}<BR>à({{ Femelle.2.COMMUNEN|nonestr }})<BR>
+      {% if SRCDF.2.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCDF.2.0.TITRE|nonestr }} {{ SRCDF.2.0.DESCRIPTION|nonestr }}">{% endif %}
+    Décédé le {{ Femelle.2.DATED|nonestr }}<BR>à({{ Femelle.2.COMMUNED|nonestr }})</TD>
+
+</TR>
+        <!-- Génération 1 -->
+<TR width="100%" >
+<TD COLSPAN="4" align="right" border="12" WIDTH="34%">
+<SPAN class="MAN_HEAD_1">
+    {{ Male.0.NOM|nonestr }}<BR>{{ Male.0.PRENOM|nonestr }}<BR>
+    {% if SRCNM.0.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCNM.0.0.TITRE|nonestr }} {{ SRCNM.0.0.DESCRIPTION|nonestr }}">{% endif %}
+    Né le {{ Male.0.DATEN|nonestr }}<BR>à({{ Male.0.COMMUNEN|nonestr }})<BR>
+    {% if SRCDM.0.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCDM.0.0.TITRE|nonestr }} {{ SRCDM.0.0.DESCRIPTION|nonestr }}">{% endif %}
+    Décédé le {{ Male.0.DATED|nonestr }}<BR>à({{ Male.0.COMMUNED|nonestr }})<BR>Profession de <BR>Autres Unions :</TD>
+
+<TD  COLSPAN="4"   align="center" border="12" WIDTH="32%">
+<SPAN class="MAR_1">
+    {% if SRCMM.0.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCMM.0.0.TITRE|nonestr }} {{ SRCMM.0.0.DESCRIPTION|nonestr }}">{% endif %}
+    Marié le {{ Mariage.DATEM|nonestr }}<BR>à {{ Mariage.COMMUNEM|nonestr }} ( {{ Mariage.DEPTM|nonestr }} )
+<BR>Enf :
+{%  for enf in EnfListe %}
+
+    <a  class="whitewine" href="affArbre?CODEF={{ enf.0 }}" > {{ enf.1 }}</a>;
+
+    {%  endfor %}
+</TD>
+<TD COLSPAN="4" align="left" border="12" WIDTH="34%">
+<SPAN class="WOMAN_HEAD_1">
+    {{ Femelle.0.NOM|nonestr }}<BR>{{ Femelle.0.PRENOM|nonestr }}<BR>
+    {% if SRCNF.0.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCNF.0.0.TITRE|nonestr }} {{ SRCNF.0.0.DESCRIPTION|nonestr }}">{% endif %}
+    Né le {{ Femelle.0.DATEN|nonestr }}<BR>à({{ Femelle.0.COMMUNEN|nonestr }})<BR>
+    {% if SRCDF.0.0 %} <img src="/static/img/INFO.gif" width="12" height="12" title="{{ SRCDF.0.0.TITRE|nonestr }} {{ SRCDF.0.0.DESCRIPTION|nonestr }}">{% endif %}
+    Décédé le {{ Femelle.0.DATED|nonestr }}<BR>à({{ Femelle.0.COMMUNED|nonestr }})<BR>Profession de <BR>Autres Unions :</TD>
+
+</TR>
+</TABLE>
+
+
+{% endblock %}

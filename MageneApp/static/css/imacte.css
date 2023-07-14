@@ -1,0 +1,13 @@
+/*police du titre de la branche*/
+p.branche {
+text-align: center;
+font-size:20px;
+}
+
+ .boite { /* d�inition de la boite 1 */
+ position:absolute ;  /* positionne la boite dans l'�ran */ 
+   top:0 ; /* �80 pixels du haut de page */
+/*  left:0 ;  et 30% du bord gauche de la page */
+    height:100%;
+    width:90%;
+    } /* bordure de la boite */
