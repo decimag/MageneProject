@@ -1,12 +1,14 @@
 import mimetypes
 
 from django.http import HttpResponse
+import os
 
 ...
 
 def download_file(request):
     # fill these variables with real values
-    flPath="C:/Users/cmag2/PycharmProjects/MageneProject/MageneApp/static/ged/GEDCOM Lilou 27 Octobre 2020.GED"
+    PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+    flPath=PROJECT_ROOT + "/static/ged/GEDCOM Lilou 27 Octobre 2020.GED"
     flName="GEDCOM Lilou 27 Octobre 2020.GED"
     fl = open(flPath, 'r')
     mime_type, _ = mimetypes.guess_type(flPath)
