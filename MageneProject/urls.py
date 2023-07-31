@@ -53,4 +53,5 @@ urlpatterns = [
     path('profil', views2.profil,name='profil'),
     path('confirmation', views2.confirm_deletion,name='confirmation'),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
