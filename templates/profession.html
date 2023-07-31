@@ -2,7 +2,7 @@
 {% block title %}Affiche arbre{% endblock %}
 {% block css %}{% endblock %}
 {% block content %}
-{% load filtertags %}
+{% load filtertags %}{% load static %}
 <div id="conteneur2" >
  <br>
  <p class="title"> Les professions de nos ancêtres.</p>
@@ -14,8 +14,8 @@
  <br> <br> <br> <br>
  <table width="100%">
  <td align="center">
- <img src="/static/img/lessive.jpg" align="center">
- <img src="/static/img/chiffon.jpeg" align="center">
+ <img src={% static "img/lessive.jpg" %} align="center">
+ <img src={% static "img/chiffon.jpeg" %} align="center">
  </td>
  </table>
  </div>

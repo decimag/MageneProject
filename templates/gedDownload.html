@@ -1,7 +1,7 @@
 {% extends "baseCousin.html" %}
 {% block title %}Affiche arbre{% endblock %}
-{% block css %}
-    <link rel="stylesheet" type="text/css" href="/static/css/cousacc.css" />
+{% block css %}{% load static %}
+    <link rel="stylesheet" type="text/css" href={% static "css/cousacc.css" %} />
 {% endblock %}
 {% block content %}
 
@@ -13,7 +13,7 @@
 
 
                   <tr><td><font class="cousacc">local102012_11-07-2023</font></td><td align="center">
-                      <a href="download_file" class="lien"><img src="/static/img/download.gif" width="12" height="12" /></a>
+                      <a href="download_file" class="lien"><img src={% static "img/download.gif" %} width="12" height="12" /></a>
                   </td></tr>
 
 

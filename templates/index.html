@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Affiche arbre{% endblock %}
-{% block css %}<link rel="stylesheet" type="text/css" href="/static/css/acc.css" />
+{% block css %}{% load static %}<link rel="stylesheet" type="text/css" href={% static "css/acc.css" %} />
     {% endblock %}
 {% block content %}
 {% load filtertags %}

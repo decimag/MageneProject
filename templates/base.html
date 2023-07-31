@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" type="text/css" href="/static/css/index.css" />
-<link rel="stylesheet" type="text/css" href="/static/css/init.css" />
+ {% load static %}{% load static %}
+<link rel="stylesheet" type="text/css" href={% static "css/index.css" %} />
+<link rel="stylesheet" type="text/css" href={% static "css/init.css" %} />
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
@@ -19,49 +20,49 @@
 
 		  <div id="im2">
 	   	     <a href="/">
-		            <img src="/static/img/spyra3.gif" width="130px" class="btn">
+		           <img src={% static "img/spyra3.gif" %} width="130px" class="btn">
 		       </a>
 		  </div>
 
 		 <div id="im4">
 	   	     <a href="patro">
-		             <img src="/static/img/lib2.gif" width="130px" class="btn">
+		             <img src={% static "img/lib2.gif" %} width="130px" class="btn">
 		       </a>
 		  </div>
 		  <div id="im5">
 	   	     <a href="/profession">
-		             <img src="/static/img/lib3.gif" width="130px" class="btn">
+		             <img src={% static "img/lib3.gif" %} width="130px" class="btn">
 		       </a>
 		  </div>
 		  <div id="im6">
 	   	     <a href="/stat">
-		             <img src="/static/img/lib4.gif" width="130px" class="btn">
+		             <img src={% static "img/lib4.gif" %} width="130px" class="btn">
 		       </a>
 		  </div>
 		  <div id="im7">
 	   	     <a href="/celebre">
-		             <img src="/static/img/lib5.gif" width="130px" class="btn">
+		             <img src={% static "img/lib5.gif" %} width="130px" class="btn">
 		       </a>
 		  </div>
 		  <div id="im8">
 	   	     <a href="/cousacc">
-		             <img src="/static/img/lib6.gif" width="130px" class="btn">
+		             <img src={% static "img/lib6.gif" %} width="130px" class="btn">
 		       </a>
 		  </div>
 
         <div id="im10">
 	   	     <a href="/merci">
-		             <img src="/static/img/lib10.gif" width="130px" class="btn">
+		             <img src={% static "img/lib10.gif" %} width="130px" class="btn">
 		       </a>
 		  </div>
 		  <div id="im11">
 
-		             <img src="/static/img/aut.gif" width="130px" class="btn">
+		             <img src={% static "img/aut.gif" %} width="130px" class="btn">
 
 		  </div>
           <div id="im12">
 	   	     <a href="/profil">
-		            <img src="/static/img/Compte.jpg" width="30px" class="btn">
+		            <img src={% static "img/Compte.jpg" %} width="30px" class="btn">
 		       </a>
 		  </div>
    </div>

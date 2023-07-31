@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Affiche arbre{% endblock %}
-{% block css %}
-    <link rel="stylesheet" type="text/css" href="/static/css/stat.css" />
+{% block css %}{% load static %}
+    <link rel="stylesheet" type="text/css" href={% static "css/stat.css" %} />
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcE97tpjqc7GHZfz7bGo_zrDfgbPExIkE&callback=initMap"
   type="text/javascript"></script>
    <script type="text/javascript">
@@ -13,7 +13,7 @@
       center: Chatlatlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    var image = "/static/img/testrond4.gif";
+    var image = {% static "img/testrond4.gif" %};
 
     var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
@@ -26,7 +26,7 @@
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    var image = "/static/img/testrond4.gif";
+    var image = {% static "img/testrond4.gif" %};
 
     var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
@@ -62,7 +62,7 @@
                             <tr height="20px">
                                 <td align="left" width="30%" margin=0>{{ patroi.NOM }}</td>
 
-                                <td align="LEFT" width="70%"> <img src="/static/img/rect.gif" width="{{ patroi.OCCURENCE|addval:20 }}" height="20">  {{ patroi.OCCURENCE }}</td></tr>
+                                <td align="LEFT" width="70%"> <img src={% static "img/rect.gif" %} width="{{ patroi.OCCURENCE|addval:20 }}" height="20">  {{ patroi.OCCURENCE }}</td></tr>
 
                    {% endfor %}
             </table>
@@ -78,7 +78,7 @@
                                     <a href="#ancre4" onMouseOver="initialize2({{ lieux.LATTITUDE }},{{ lieux.LONGITUDE }})"> {{ lieux.COMMUNE }}</a>
                                 </td>
 
-                                <td align="LEFT" width="70%"> <img src="/static/img/rect.gif" width="{{ lieux.OCCURENCE|addsqrtval:20 }}" height="20">  {{ lieux.OCCURENCE }}</td></tr>
+                                <td align="LEFT" width="70%"> <img src={% static "img/rect.gif" %} width="{{ lieux.OCCURENCE|addsqrtval:20 }}" height="20">  {{ lieux.OCCURENCE }}</td></tr>
                              </tr>
                    {% endfor %}
           </table>
@@ -108,12 +108,12 @@
                  {% if Agemari.GENRE == 'F' %}
                       <tr height="20px">
                         <td align="left" width="50%" margin=0  style="color: #f449e6">Femmes (Siecle={{  Agemari.SIECLE }} eme)</td>
-                        <td align="LEFT" width="50%" style="color: #f449e6"> <img src="/static/img/femmes.gif" width="{{ Agemari.AGEMOYEN|addtrestval:20 }}" height="20"> {{ Agemari.AGEMOYEN }}</td>
+                        <td align="LEFT" width="50%" style="color: #f449e6"> <img src={% static "img/femmes.gif" %} width="{{ Agemari.AGEMOYEN|addtrestval:20 }}" height="20"> {{ Agemari.AGEMOYEN }}</td>
                       </tr>
                   {% else %}
 <tr height="20px">
                         <td align="left" width="50%" margin=0  style="color: blue">Femmes (Siecle={{  Agemari.SIECLE }} eme)</td>
-                        <td align="LEFT" width="50%" style="color: blue"> <img src="/static/img/hommes.gif" width="{{ Agemari.AGEMOYEN|addtrestval:20 }}" height="20"> {{ Agemari.AGEMOYEN }}</td>
+                        <td align="LEFT" width="50%" style="color: blue"> <img src={% static "img/hommes.gif" %} width="{{ Agemari.AGEMOYEN|addtrestval:20 }}" height="20"> {{ Agemari.AGEMOYEN }}</td>
                       </tr>
                  {%  endif %}
                {%  endfor %}
@@ -131,12 +131,12 @@
                  {% if Espviei.GENRE == 'F' %}
                       <tr height="20px">
                         <td align="left" width="50%" margin=0  style="color: #f449e6">Femmes (Siecle={{  Espviei.SIECLE }} eme)</td>
-                        <td align="LEFT" width="50%" style="color: #f449e6"> <img src="/static/img/femmes.gif" width="{{ Espviei.ESPVIEMOYEN|addtrestval:20 }}" height="20"> {{ Espviei.ESPVIEMOYEN }}</td>
+                        <td align="LEFT" width="50%" style="color: #f449e6"> <img src={% static "img/femmes.gif" %} width="{{ Espviei.ESPVIEMOYEN|addtrestval:20 }}" height="20"> {{ Espviei.ESPVIEMOYEN }}</td>
                       </tr>
                   {% else %}
 <tr height="20px">
                         <td align="left" width="50%" margin=0  style="color: blue">Femmes (Siecle={{  Espviei.SIECLE }} eme)</td>
-                        <td align="LEFT" width="50%" style="color: blue"> <img src="/static/img/hommes.gif" width="{{ Espviei.ESPVIEMOYEN|addtrestval:20 }}" height="20"> {{ Espviei.ESPVIEMOYEN }}</td>
+                        <td align="LEFT" width="50%" style="color: blue"> <img src={% static "img/hommes.gif" %} width="{{ Espviei.ESPVIEMOYEN|addtrestval:20 }}" height="20"> {{ Espviei.ESPVIEMOYEN }}</td>
                       </tr>
                  {%  endif %}
                {%  endfor %}
@@ -146,7 +146,7 @@
             <P align="center"><a name=ancrePr><b>PROFESSIONS</b></a></P><br><br>
             <P align="center">Les professions ont été regroupées par catégories professionnelles</P><br>
             <P align="center">
-            <img src="/static/img/GrProf.gif" align="middle">
+            <img src={% static "img/GrProf.gif" %} align="middle">
             </p>
            </div>
 </div>

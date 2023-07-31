@@ -1,7 +1,7 @@
 {% extends "baseCousin.html" %}
-{% block title %}Affiche arbre{% endblock %}
+{% block title %}Affiche arbre{% endblock %}{% load static %}
 {% block css %}
-    <link rel="stylesheet" type="text/css" href="/static/css/cousacc.css" />
+    <link rel="stylesheet" type="text/css" href={% static "css/cousacc.css" %}  />
 {% endblock %}
 {% block content %}
 

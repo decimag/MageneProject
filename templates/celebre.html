@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Affiche branche{% endblock %}
 {% block content %}
-
+{% load static %}
  <br>
   <p class="title">Quelques personnages s'étant remarqués ...</p>
   <BR><BR><BR><BR>
@@ -14,7 +14,7 @@
   <BR><BR>
    <hr></hr>
   <div id="picture" >
-  <img src="/static/img/pagnol.jpeg">
+  <img src={% static "img/pagnol.jpeg" %}>
   </div>
   <p class="celebnom"><A name="ancre1">Marcel Pagnol</A></p>
   <br>
@@ -54,7 +54,7 @@
 
   <hr></hr>
   <div id="picture">
-  <img src="/static/img/Cardinal.jpg">
+  <img src={% static "img/Cardinal.jpg" %}>
   </div>
   <p class="celebnom"><A name="ancre2">Jean Siffrein Maury</A></p>
    <br>
@@ -80,7 +80,7 @@
   </p>
     <hr></hr>
   <div id="picture">
-  <img src="/static/img/frereAJ.jpg" height="200" width="125">
+  <img src={% static "img/frereAJ.jpg" %}  height="200" width="125">
   </div>
   <p class="celebnom"><A name="ancre3">Gustave Bouillaud</A></p>
    <br>
@@ -121,8 +121,8 @@
   Gustave s’est installé comme photographe à Macon entre 1882 et 1886 jusqu’à sa mort en 1924.
   Il possédait 3 studios à Macon (4 rue de la Paroisse, 31 rue de la Barre, 19 quai du Nord).  </p>
   <center>
-  <img src="/static/img/affiche1.jpg" height="100" width="200"></img>
-   <img src="/static/img/affiche2.jpg" height="200" width="100"></img></center><br> <p class="celebind">
+  <img src={% static "img/affiche1.jpg" %} height="100" width="200"></img>
+   <img src={% static "img/affiche2.jpg" %}  height="200" width="100"></img></center><br> <p class="celebind">
   Gustave, participa au développement technique de la photographie comme en témoigne la présentation faite en 1906 lors de
   sa nomination à l’académie de Mâcon (société des arts, sciences, belles-lettres et d’agriculture).
     </p>
@@ -141,7 +141,7 @@
 Médailles d’argent, FLORENCE 1887</p><p class="celebcita">
 Médailles d’argent, PARIS 1887</p><p class="celebcita">
 Médailles d’argent, BARCELONE 1888</p><p class="celebcita">
-Médailles d’argent, PARIS 1889(exposition universelle)</p><center><img src="/static/img/paris1889.jpg" height="200" width="131"></img></center><br>
+Médailles d’argent, PARIS 1889(exposition universelle)</p><center><img src={% static "img/paris1889.jpg" %}  height="200" width="131"></img></center><br>
    <p class="celebind">
 Le rapport du Jury de l’exposition de 1889 (celle pour laquelle fut construite la tour Eiffel) rend hommage au talent de Gustave.
 
