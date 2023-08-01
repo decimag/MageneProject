@@ -20,8 +20,8 @@ def patro(request):
 
 def index(request):
     BASE_DIR = Path(__file__).resolve().parent.parent
-    toto=os.path.join(BASE_DIR, 'MageneApp/static')
-    return render(request, "index.html", {'toto': toto})
+    toto=os.path.join(BASE_DIR, 'MageneApp','static')
+    return render(request, "index.html", {'toto': toto,'titi': BASE_DIR})
 
 def getMar(idMar,Genre):
     ret=''
