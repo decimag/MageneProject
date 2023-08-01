@@ -1,6 +1,7 @@
 from MageneApp.models import INDIV,FAM,SOURCES
 from django.shortcuts import render
-
+from pathlib import Path
+import os
 # Create your views here.
 # 65 in char is A
 # 90 in char is Z
@@ -18,7 +19,9 @@ def patro(request):
         return render(request, "patro.html", {'letter_list': ListAlph})
 
 def index(request):
-    return render(request, "index.html")
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    toto=os.path.join(BASE_DIR, 'MageneApp/static')
+    return render(request, "index.html", {'toto': toto})
 
 def getMar(idMar,Genre):
     ret=''
