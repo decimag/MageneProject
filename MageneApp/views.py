@@ -112,6 +112,7 @@ def affArbre(request):
                 SRC21D = SOURCES.objects.filter(CODES=MaleInfo21.CODESD)
                 SRC21M = SOURCES.objects.filter(CODES=Fam21[0].CODESM)
                 CodeF21 = Fam21[0].CODEF
+                Mar21 = getMariObj(CodeF21)
                 MaleCode31 = getIndiCode(MaleInfo21.CODEF_id, 'M')
                 if MaleCode31 != '':
                    MaleInfo31 = getIndObj(MaleCode31)
@@ -120,11 +121,13 @@ def affArbre(request):
                    SRC31D = SOURCES.objects.filter(CODES=MaleInfo31.CODESD)
                    SRC31M = SOURCES.objects.filter(CODES=Fam31[0].CODESM)
                    CodeF31 = Fam31[0].CODEF
+                   Mar31 = getMariObj(CodeF31)
                 else:
                     CodeF31 = -1
                     SRC31N = SOURCES
                     SRC31D = SOURCES
                     SRC31M = SOURCES
+                    Mar31 = FAM
                     MaleInfo31=INDIV
                 FemelleCode31 = getIndiCode(MaleInfo21.CODEF_id, 'F')
                 if FemelleCode31 != '':
@@ -146,6 +149,7 @@ def affArbre(request):
                 SRC21N = SOURCES
                 SRC21D = SOURCES
                 SRC21M = SOURCES
+                Mar21 = FAM
                 MaleInfo31 = INDIV
                 CodeF31 = -1
                 SRC31N = SOURCES
@@ -172,10 +176,12 @@ def affArbre(request):
                     SRC32D = SOURCES.objects.filter(CODES=MaleInfo32.CODESN)
                     SRC32M = SOURCES.objects.filter(CODES=Fam32[0].CODESM)
                     CodeF32 = Fam32[0].CODEF
+                    Mar32 = getMariObj(CodeF32)
                 else:
                     MaleInfo32 = INDIV
                     SRC32N = SOURCES
                     SRC32D = SOURCES
+                    Mar32 = FAM
                     SRC32M = SOURCES
                     CodeF32 = -1
                 FemelleCode32 = getIndiCode(FemelleInfo21.CODEF_id, 'F')
@@ -261,6 +267,7 @@ def affArbre(request):
                 SRC22D = SOURCES.objects.filter(CODES=MaleInfo22.CODESN)
                 SRC22M = SOURCES.objects.filter(CODES=Fam22[0].CODESM)
                 CodeF22 = Fam22[0].CODEF
+                Mar22 = getMariObj(CodeF22)
                 MaleCode33 = getIndiCode(MaleInfo22.CODEF_id, 'M')
                 if MaleCode33 != '':
                     MaleInfo33 = getIndObj(MaleCode33)
@@ -269,11 +276,13 @@ def affArbre(request):
                     SRC33D = SOURCES.objects.filter(CODES=MaleInfo33.CODESN)
                     SRC33M = SOURCES.objects.filter(CODES=Fam33[0].CODESM)
                     CodeF33 = Fam33[0].CODEF
+                    Mar33 = getMariObj(CodeF33)
                 else:
                     MaleInfo33 = INDIV
                     SRC33N = SOURCES
                     SRC33D = SOURCES
                     SRC33M = SOURCES
+                    Mar33 = FAM
                     CodeF33=-1
                 FemelleCode33 = getIndiCode(MaleInfo22.CODEF_id, 'F')
                 if FemelleCode33 != '':
@@ -294,6 +303,7 @@ def affArbre(request):
                 SRC22N = SOURCES
                 SRC22D = SOURCES
                 SRC22M = SOURCES
+                Mar22 = FAM
                 CodeF22=-1
                 MaleInfo33 = INDIV
                 SRC33N = SOURCES
@@ -325,11 +335,13 @@ def affArbre(request):
                     SRC34D = SOURCES.objects.filter(CODES=MaleInfo34.CODESN)
                     SRC34M = SOURCES.objects.filter(CODES=Fam34[0].CODESM)
                     CodeF34 = Fam34[0].CODEF
+                    Mar34 = getMariObj(CodeF34)
                 else:
                     MaleInfo34 = INDIV
                     SRC34N = SOURCES
                     SRC34D = SOURCES
                     SRC34M = SOURCES
+                    Mar34 = FAM
                     CodeF34=-1
                 FemelleCode34 = getIndiCode(FemelleInfo22.CODEF_id, 'F')
                 if FemelleCode34 != '':
@@ -475,7 +487,14 @@ def affArbre(request):
     CodeSRCFemaleM.append(SRC32MF)
     CodeSRCFemaleM.append(SRC33MF)
     CodeSRCFemaleM.append(SRC34MF)
-
-    return render(request, "affArbre.html", {'Male': TABMALE, 'Femelle': TABFEMELLE, 'Mariage': Mar, 'EnfListe': EnfListe, \
+    Mariages=[]
+    Mariages.append(Mar)
+    Mariages.append(Mar21)
+    Mariages.append(Mar22)
+    Mariages.append(Mar31)
+    Mariages.append(Mar32)
+    Mariages.append(Mar33)
+    Mariages.append(Mar34)
+    return render(request, "affArbre.html", {'Male': TABMALE, 'Femelle': TABFEMELLE, 'Mariage': Mariages, 'EnfListe': EnfListe, \
                                              'CodeF':CodeFMale,'SRCNM':CodeSRCMaleN,'SRCDM':CodeSRCMaleD,'SRCMM':CodeSRCMaleM, \
                                              'CodeFF': CodeFFemale, 'SRCNF': CodeSRCFemaleM, 'SRCDF': CodeSRCFemaleD, 'SRCMF': CodeSRCFemaleM })

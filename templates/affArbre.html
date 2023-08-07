@@ -20,6 +20,8 @@
 </TD>
     <TD  align="center" WIDTH="7%" >
 <SPAN class="MAR_3">
+ {{ Mariage.3.DATEM|nonestr }}
+</SPAN>
 </TD>
 <TD  align="left" WIDTH="9%" >
 <SPAN class="WOMAN_HEAD_3">
@@ -41,6 +43,8 @@
 
 <TD   align="center" WIDTH="7%" >
 <SPAN class="MAR_3">
+ {{ Mariage.4.DATEM|nonestr }}
+</SPAN>
 </TD>
 <TD  align="left" WIDTH="9%" >
 <SPAN class="WOMAN_HEAD_3">
@@ -61,6 +65,8 @@
 
 <TD  align="center" WIDTH="7%" >
 <SPAN class="MAR_3">
+ {{ Mariage.5.DATEM|nonestr }}
+</SPAN>
 </TD>
 <TD  align="left" WIDTH="9%" >
 <SPAN class="WOMAN_HEAD_3">
@@ -82,6 +88,8 @@
 
 <TD   align="center" WIDTH="7%" >
 <SPAN class="MAR_3">
+ {{ Mariage.6.DATEM|nonestr }}
+</SPAN>
 </TD>
 <TD  align="left" WIDTH="9%" >
 <SPAN class="WOMAN_HEAD_3">
@@ -110,7 +118,8 @@
     Décédé le {{ Male.1.DATED|nonestr }}<BR>à({{ Male.1.COMMUNED|nonestr }})</TD>
 <TD  COLSPAN="2"   align="center" WIDTH="16%" >
 <SPAN class="MAR_2">
-<BR></TD>
+ {{ Mariage.1.DATEM|nonestr }}<BR>à {{ Mariage.1.COMMUNEM|nonestr }} ( {{ Mariage.1.DEPTM|nonestr }} )
+</SPAN></TD>
 <TD  COLSPAN="2"  align="left" WIDTH="17%" >
 <SPAN class="WOMAN_HEAD_2">
 {{ Femelle.1.NOM|nonestr }}
@@ -138,7 +147,9 @@
     Décédé le {{ Male.2.DATED|nonestr }}<BR>à({{ Male.2.COMMUNED|nonestr }})</TD>
 <TD  COLSPAN="2"  align="center" WIDTH="16%" >
 <SPAN class="MAR_2">
-20 DEC 1897<BR>Migné( 36800)</TD>
+ {{ Mariage.2.DATEM|nonestr }}<BR>à {{ Mariage.2.COMMUNEM|nonestr }} ( {{ Mariage.2.DEPTM|nonestr }} )
+</SPAN>
+</TD>
 <TD  COLSPAN="2"   align="left" WIDTH="17%" >
 <SPAN class="WOMAN_HEAD_2">
 {{ Femelle.2.NOM|nonestr }}
@@ -165,7 +176,7 @@
 <TD  COLSPAN="4"   align="center" border="12" WIDTH="32%">
 <SPAN class="MAR_1">
     {% if SRCMM.0.0 %} <img src={% static "img/INFO.gif" %} width="12" height="12" title="{{ SRCMM.0.0.TITRE|nonestr }} {{ SRCMM.0.0.DESCRIPTION|nonestr }}">{% endif %}
-    Marié le {{ Mariage.DATEM|nonestr }}<BR>à {{ Mariage.COMMUNEM|nonestr }} ( {{ Mariage.DEPTM|nonestr }} )
+    Marié le {{ Mariage.0.DATEM|nonestr }}<BR>à {{ Mariage.0.COMMUNEM|nonestr }} ( {{ Mariage.0.DEPTM|nonestr }} )
 <BR>Enf :
 {%  for enf in EnfListe %}
 
