@@ -90,7 +90,16 @@ def getEnf(vCodef):
         CodeFEnf.append(TB1)
     return CodeFEnf
 
+def getListeMar(vInd,vFamExl):
+    CodeFMar=[]
+    listMar = FAM.objects.filter(INDM=vInd) | FAM.objects.filter(INDF=vInd)
+    for fam in listMar:
+        if str(fam.CODEF) != str(vFamExl):
+            CodeFMar.append(fam.CODEF)
+    return CodeFMar
 def affArbre(request):
+    listeMMar=[]
+    listeFMar=[]
     if 'CODEF' in request.GET:
         CodeM=request.GET['CODEF']
         Mar=getMariObj(CodeM)
@@ -98,6 +107,7 @@ def affArbre(request):
         MaleCode=getIndiCode(CodeM, 'M')
         CodeF21=-1
         if MaleCode != '':
+            listeMMar=getListeMar(MaleCode,CodeM)
             MaleInfo=getIndObj(MaleCode)
             Fam = FAM.objects.filter(INDM_id=MaleCode)
             SRCN = SOURCES.objects.filter(CODES=MaleInfo.CODESN)
@@ -151,6 +161,7 @@ def affArbre(request):
                 SRC21M = SOURCES
                 Mar21 = FAM
                 MaleInfo31 = INDIV
+                Mar31 = FAM
                 CodeF31 = -1
                 SRC31N = SOURCES
                 SRC31D = SOURCES
@@ -160,6 +171,7 @@ def affArbre(request):
                 SRC31DF = SOURCES
                 SRC31MF = SOURCES
                 CodeF31F = -1
+                Mar31 = FAM
             FemelleCode21 = getIndiCode(MaleInfo.CODEF_id, 'F')
             if FemelleCode21 != '':
                 FemelleInfo21 = getIndObj(FemelleCode21)
@@ -194,17 +206,20 @@ def affArbre(request):
                     CodeF32F = Fam31[0].CODEF
                 else:
                     FemelleInfo32 = INDIV
+                    Mar32 = FAM
                     SRC32NF = SOURCES
                     SRC32DF = SOURCES
                     SRC32MF = SOURCES
                     CodeF32F = -1
             else:
                 FemelleInfo21=INDIV
+                Mar21 = FAM
                 SRC21NF = SOURCES
                 SRC21DF = SOURCES
                 SRC21MF = SOURCES
                 CodeF21F = -1
                 MaleInfo32 = INDIV
+                Mar32 = FAM
                 SRC32N = SOURCES
                 SRC32D = SOURCES
                 SRC32M = SOURCES
@@ -220,6 +235,7 @@ def affArbre(request):
             SRCD = SOURCES
             SRCM = SOURCES
             MaleInfo21 = INDIV
+            Mar21 = FAM
             SRC21N = SOURCES
             SRC21D = SOURCES
             SRC21M = SOURCES
@@ -230,6 +246,7 @@ def affArbre(request):
             SRC21MF = SOURCES
             CodeF21F = -1
             MaleInfo31 = INDIV
+            Mar31 = FAM
             SRC31N = SOURCES
             SRC31D = SOURCES
             SRC31M = SOURCES
@@ -240,6 +257,7 @@ def affArbre(request):
             SRC31MF = SOURCES
             CodeF31F = -1
             MaleInfo32 = INDIV
+            Mar32 = FAM
             SRC32N = SOURCES
             SRC32D = SOURCES
             SRC32M = SOURCES
@@ -251,6 +269,7 @@ def affArbre(request):
             CodeF32F = -1
         FemelleCode=getIndiCode(CodeM, 'F')
         if FemelleCode != '':
+            listeFMar = getListeMar(FemelleCode, CodeM)
             FemelleInfo = getIndObj(FemelleCode)
             Fam = FAM.objects.filter(INDF_id=FemelleCode)
             SRCNF = SOURCES.objects.filter(CODES=FemelleInfo.CODESN)
@@ -294,6 +313,7 @@ def affArbre(request):
                     CodeF33F = Fam31[0].CODEF
                 else:
                     FemelleInfo33 = INDIV
+                    Mar33 = FAM
                     SRC33NF = SOURCES
                     SRC33DF = SOURCES
                     SRC33MF = SOURCES
@@ -310,6 +330,7 @@ def affArbre(request):
                 SRC33D = SOURCES
                 SRC33M = SOURCES
                 CodeF33 = -1
+                Mar33= FAM
                 FemelleInfo33 = INDIV
                 SRC33NF = SOURCES
                 SRC33DF = SOURCES
@@ -352,12 +373,14 @@ def affArbre(request):
                     CodeF34F = Fam31[0].CODEF
                 else:
                     FemelleInfo34 = INDIV
+                    Mar34 = FAM
                     SRC34NF = SOURCES
                     SRC34DF = SOURCES
                     SRC34MF = SOURCES
                     CodeF34F = -1
             else:
                 FemelleInfo22 = INDIV
+                Mar22 = FAM
                 SRC22NF = SOURCES
                 SRC22DF = SOURCES
                 SRC22MF = SOURCES
@@ -366,6 +389,7 @@ def affArbre(request):
                 SRC34N = SOURCES
                 SRC34D = SOURCES
                 SRC34M = SOURCES
+                Mar34 = FAM
                 CodeF34 = -1
                 FemelleInfo34 = INDIV
                 SRC34NF = SOURCES
@@ -378,6 +402,7 @@ def affArbre(request):
             SRCDF = SOURCES
             SRCMF = SOURCES
             MaleInfo22 = INDIV
+            Mar22 = FAM
             SRC22N = SOURCES
             SRC22D = SOURCES
             SRC22M = SOURCES
@@ -388,6 +413,7 @@ def affArbre(request):
             SRC22MF = SOURCES
             CodeF22F = -1
             MaleInfo33 = INDIV
+            Mar33 = FAM
             SRC33N = SOURCES
             SRC33D = SOURCES
             SRC33M = SOURCES
@@ -398,6 +424,7 @@ def affArbre(request):
             SRC33MF = SOURCES
             CodeF33F = -1
             MaleInfo34 = INDIV
+            Mar34 = FAM
             SRC34N = SOURCES
             SRC34D = SOURCES
             SRC34M = SOURCES
@@ -497,4 +524,5 @@ def affArbre(request):
     Mariages.append(Mar34)
     return render(request, "affArbre.html", {'Male': TABMALE, 'Femelle': TABFEMELLE, 'Mariage': Mariages, 'EnfListe': EnfListe, \
                                              'CodeF':CodeFMale,'SRCNM':CodeSRCMaleN,'SRCDM':CodeSRCMaleD,'SRCMM':CodeSRCMaleM, \
-                                             'CodeFF': CodeFFemale, 'SRCNF': CodeSRCFemaleM, 'SRCDF': CodeSRCFemaleD, 'SRCMF': CodeSRCFemaleM })
+                                             'CodeFF': CodeFFemale, 'SRCNF': CodeSRCFemaleM, 'SRCDF': CodeSRCFemaleD,
+                                             'SRCMF': CodeSRCFemaleM, 'ListeMMar': listeMMar ,'ListeFMar': listeFMar})

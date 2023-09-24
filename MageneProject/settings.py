@@ -141,3 +141,6 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "4fbf8003ec1261df53b643b3657fd759"
 EMAIL_HOST_PASSWORD = "170044d308a5ea57738ec9bd515b1592"
+
+
+CSRF_TRUSTED_ORIGINS = ['https://magenealogie.fr', 'https://www.magenealogie.fr']

@@ -4,24 +4,30 @@
     <link rel="stylesheet" type="text/css" href={% static "css/cousacc.css" %} />
 {% endblock %}
 {% block content %}
-
-      <table border="1" CELLPADDING="4" CELLSPACING="0">
+  <div id="boitecousin">
+    <table height="100%" width="100%"  border="1" bgcolor="#747064">
+   <tr>
+       <td height="10%" width="50%" valign="middle" class="process"><p class="liencous"><a class="white" href="TabActes">Actes</a></p></td>
+        <td height="10%" width="50%" valign="middle" class="process"><p class="liencous"><a class="white" href="gedDownload">Gedcom</a></p></td>
+     </tr>
+     <tr>
+         <td height="90%" COLSPAN=6 bgcolor="#d9d9d7" ALIGN="center">
+         <table border="1" CELLPADDING="4" CELLSPACING="0">
       <tr>
       <th><font class="cousacc">Fichier</font></th>
       <th><font class="cousacc">télécharger</font></th>
-      </tr>
-
-
-                  <tr><td><font class="cousacc">local102012_11-07-2023</font></td><td align="center">
+      </tr>    <tr><td><font class="cousacc">local102012_11-07-2023</font></td><td align="center">
                       <a href="download_file" class="lien"><img src={% static "img/download.gif" %} width="12" height="12" /></a>
                   </td></tr>
-
-
-
-
-
-
       </table>
+     </td>
+
+	</tr>
+
+	</table>
+
+     </div>
+
 
 
 {% endblock %}

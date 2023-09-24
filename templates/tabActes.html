@@ -4,8 +4,15 @@
     <link rel="stylesheet" type="text/css" href={% static "css/cousacc.css" %} />
 {% endblock %}
 {% block content %}
-
-     <form action="TabActes"  method="POST">'
+<div id="boitecousin">
+    <table height="100%" width="100%"  border="1" bgcolor="#747064">
+   <tr>
+       <td height="10%" width="50%" valign="middle" class="process"><p class="liencous"><a class="white" href="TabActes">Actes</a></p></td>
+        <td height="10%" width="50%" valign="middle" class="process"><p class="liencous"><a class="white" href="gedDownload">Gedcom</a></p></td>
+     </tr>
+     <tr>
+         <td height="90%" COLSPAN=6 bgcolor="#d9d9d7" ALIGN="center">
+              <form action="TabActes"  method="POST">'
      {% csrf_token %}
 	<br><br>Filtre par le NOM : <select name="NomFiltre" onchange="submit()">
 	 <OPTION value="tous">tous
@@ -50,4 +57,12 @@
 
     </table>
 {{ AffichNom }}
+     </td>
+
+	</tr>
+
+	</table>
+
+     </div>
+
 {% endblock %}

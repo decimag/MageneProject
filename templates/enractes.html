@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "baseCousin.html" %}
 {% block title %}Affiche arbre{% endblock %}
 {% block css %}{% load static %}
     <link rel="stylesheet" type="text/css" href={% static "css/cousacc.css" %} />
@@ -6,9 +6,9 @@
 {% block content %}
   <div id="boitecousin">
     <table height="100%" width="100%"  border="1" bgcolor="#747064">
-   <tr>
-         <td height="10%" width="50%" valign="middle" class="process"><p class="liencous">Actes</p></td>
-        <td height="10%" width="50%" valign="middle" class="process"><p class="liencous">Gedcom</p></td>
+    <tr>
+       <td height="10%" width="50%" valign="middle" class="process"><p class="liencous"><a class="white" href="TabActes">Actes</a></p></td>
+        <td height="10%" width="50%" valign="middle" class="process"><p class="liencous"><a class="white" href="gedDownload">Gedcom</a></p></td>
      </tr>
      <tr>
      <TD height="90%" COLSPAN=6 bgcolor="#d9d9d7" ALIGN="center">
