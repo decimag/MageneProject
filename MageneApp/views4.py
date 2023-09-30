@@ -9,7 +9,7 @@ def download_file(request):
     # fill these variables with real values
     PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
     flPath=PROJECT_ROOT + "/static/ged/local102012_19-09-2023.ged"
-    flName="GEDCOM Lilou 27 Octobre 2020.GED"
+    flName="local102012_19-09-2023.ged"
     fl = open(flPath, 'r')
     mime_type, _ = mimetypes.guess_type(flPath)
     response = HttpResponse(fl, content_type=mime_type)
