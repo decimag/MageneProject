@@ -144,3 +144,4 @@ EMAIL_HOST_PASSWORD = "170044d308a5ea57738ec9bd515b1592"
 
 
 CSRF_TRUSTED_ORIGINS = ['https://magenealogie.fr', 'https://www.magenealogie.fr']
+DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880 # 5 MB
