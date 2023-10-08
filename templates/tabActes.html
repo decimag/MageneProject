@@ -46,7 +46,11 @@
 <tr>
             <TD> {{ nom.LOGIN }}</TD>
        <TD> {{ nom.TYPE }}</TD>
+      {% if nom.NOM2 is None %}
+          <TD> {{ nom.NOM1 }}  {{ nom.PRENOM1 }} </TD>
+          {%  else %}
        <TD> {{ nom.NOM1 }}  {{ nom.PRENOM1 }} & {{ nom.NOM2 }}  {{ nom.PRENOM2 }}</TD>
+    {% endif %}
   <TD> {{ nom.DATE_ACTE }}</TD>
        <TD>   <a target="_blank" href="affActes?pathImg={{ nom.IMG_ACTES }}">Voir</a></TD>
 
