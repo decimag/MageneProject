@@ -31,6 +31,22 @@ class MariageForm(forms.ModelForm):
         model = ACTES
         fields = ['NOM1','NOM2','PRENOM1','PRENOM2','IMG_ACTES','NUMPART_ACTE','DATE_ACTE','LINKACTE','TYPE','DATE','LOGIN','INTITULE']
 
+    def clean_NOM1(self):
+        """
+        ensure that email is always lower case.
+        """
+        if self.cleaned_data['NOM1'] is None:
+            return None
+        else:
+            return self.cleaned_data['NOM1'].upper()
+    def clean_NOM2(self):
+        """
+        ensure that email is always lower case.
+        """
+        if self.cleaned_data['NOM2'] is None:
+            return None
+        else:
+            return self.cleaned_data['NOM2'].upper()
 class ProfilePlus(forms.ModelForm):
     class Meta:
         model = GENUSERS_PROFIL

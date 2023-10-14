@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/prof.css" />
 {% endblock %}
 {% block content %}
+    {{ msg }}
 <form method="POST" novalidate>
 	{% csrf_token %}
 	<h2>Login</h2>

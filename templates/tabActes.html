@@ -36,6 +36,10 @@
 </TD>
 <TD width='10%' class='gen' align='center'>
 <span class='cousacc'>DATE</span>
+
+        </TD>
+        <TD width='10%' class='gen' align='center'>
+<span class='cousacc'>Partie</span>
 </TD>
 <TD width='10%' class='gen' align='center'>
 <span class='cousacc'>Consultation</span>
@@ -52,6 +56,7 @@
        <TD> {{ nom.NOM1 }}  {{ nom.PRENOM1 }} & {{ nom.NOM2 }}  {{ nom.PRENOM2 }}</TD>
     {% endif %}
   <TD> {{ nom.DATE_ACTE }}</TD>
+<TD> {{ nom.NUMPART_ACTE }}</TD>
        <TD>   <a target="_blank" href="affActes?pathImg={{ nom.IMG_ACTES }}">Voir</a></TD>
 
 

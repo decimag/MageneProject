@@ -54,6 +54,8 @@ def loginPlus(request):
                     return redirect(nxt)
                 else:
                     return redirect(url)
+            else:
+                return render(request, "registration/loginPlus.html", {'form': form,'msg': 'User ou mot de passe incorrect'})
         else:
             return render(request, "registration/loginPlus.html", {'form': form})
     else:
