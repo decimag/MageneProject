@@ -1,18 +1,18 @@
 
-/*définit la police des lettres*/
+/*dï¿½finit la police des lettres*/
 p.lettre {
 text-align: center;
 margin:0% ;
 font-size: 30px;
 }
-/*définit la police des libellés métiers*/
+/*dï¿½finit la police des libellï¿½s mï¿½tiers*/
 p.lib {
 margin-left:12%;
 font-weight: bold;
 font-style: italic;
 color:#A52A2A;
 }
-/*définit la police du texte informatif ex : Occurence...*/
+/*dï¿½finit la police du texte informatif ex : Occurence...*/
 p.inf {
 text-indent: 70px;
 margin-top: 0px;
@@ -22,7 +22,7 @@ margin-top: 0px;
 	color:green;
 
 }
-/*définit la positiondes éléments Occurence,siecle,dpt*/
+/*dï¿½finit la positiondes ï¿½lï¿½ments Occurence,siecle,dpt*/
 #column1 {
 	position:relative;
 	width: 50%;
@@ -30,12 +30,12 @@ margin-top: 0px;
 }
 
 
-/*définit le début d'où commence la définition*/
+/*dï¿½finit le dï¿½but d'oï¿½ commence la dï¿½finition*/
 #Def {
 //	clear:both;
 	margin-left:12%;
 }
-/*définit la police de la définition*/
+/*dï¿½finit la police de la dï¿½finition*/
 p.defpol {
 font-family:"georgia";
  
@@ -44,21 +44,21 @@ margin-top: 0px;
 	margin-bottom: 0px;
 	margin-left:0px;
 }
-/*définit la police de la liste de lettres*/
+/*dï¿½finit la police de la liste de lettres*/
 p.ls {
 text-align: center;
 margin:0% ;
 font-size:20px;
 
 }
-/*définit la police du titre*/
+/*dï¿½finit la police du titre*/
 p.title {
 text-align: center;
 margin:0% ;
 font-size:25px;
 font-style: italic;
 }
-/*définit police des titre page acc prof*/
+/*dï¿½finit police des titre page acc prof*/
 p.title {
 text-align: center;
 margin:0% ;
@@ -67,7 +67,7 @@ color:#16bc33;
 font-size:25px;
 font-style: italic;
 }
-/*définit police page acc prof liens*/
+/*dï¿½finit police page acc prof liens*/
 p.lienprof {
 text-align: center;
 margin:0% ;
@@ -91,4 +91,10 @@ font-style: italic;
 p.gen {
  color:#16bc33;
 
+}
+a:link {
+  color: #2d4235;
+  }
+a:visited {
+    color :darkred;
 }

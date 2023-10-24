@@ -1,6 +1,9 @@
 {% extends "base.html" %}
-{% block title %}Affiche arbre{% endblock %}
-{% block css %}{% endblock %}
+{% block css %}{% load static %}
+    <link rel="stylesheet" type="text/css" href={% static "css/celebre.css" %} />
+{% endblock %}
+{% block title %}Professions{% endblock %}
+
 {% block content %}
 {% load filtertags %}{% load static %}
 <div id="conteneur2" >

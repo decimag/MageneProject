@@ -1,5 +1,8 @@
 {% extends "base.html" %}
-{% block title %}Affiche branche{% endblock %}
+{% block css %}{% load static %}
+    <link rel="stylesheet" type="text/css" href={% static "css/celebre.css" %} />
+{% endblock %}
+{% block title %}Célebre{% endblock %}
 {% block content %}
 {% load static %}
  <br>

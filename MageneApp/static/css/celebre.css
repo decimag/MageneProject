@@ -32,3 +32,9 @@ margin-left: 50px;
 font-style: italic;
 color:#6d6d6d;
 }
+a:link {
+  color: #2d4235;
+  }
+a:visited {
+    color :darkred;
+}

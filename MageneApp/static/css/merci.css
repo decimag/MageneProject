@@ -13,3 +13,10 @@ text-indent:30px;
 margin-left:20px;
 margin-right:20px;
 }
+
+a:link {
+  color: #16bc33;
+  }
+a:visited {
+    color :darkred;
+}
