@@ -171,7 +171,7 @@
     {% if SRCNM.0.0 %} <img src={% static "img/INFO.gif" %} width="12" height="12" title="{{ SRCNM.0.0.TITRE|nonestr }} {{ SRCNM.0.0.DESCRIPTION|nonestr }}">{% endif %}
     Né le {{ Male.0.DATEN|nonestr }}<BR>à({{ Male.0.COMMUNEN|nonestr }})<BR>
     {% if SRCDM.0.0 %} <img src={% static "img/INFO.gif" %} width="12" height="12" title="{{ SRCDM.0.0.TITRE|nonestr }} {{ SRCDM.0.0.DESCRIPTION|nonestr }}">{% endif %}
-    Décédé le {{ Male.0.DATED|nonestr }}<BR>à({{ Male.0.COMMUNED|nonestr }})<BR>Profession de <BR>Autres Unions :
+    Décédé le {{ Male.0.DATED|nonestr }}<BR>à({{ Male.0.COMMUNED|nonestr }})<BR>Profession de {{ Male.0.PROF|nonestr }}<BR>Autres Unions :
 {%  for enf in ListeMMar %}
 
     <a  class="whitewine" href="affArbre?CODEF={{ enf }}" > {{forloop.counter0|add:"1"}}</a>;
@@ -196,7 +196,7 @@
     {% if SRCNF.0.0 %} <img src={% static "img/INFO.gif" %} width="12" height="12" title="{{ SRCNF.0.0.TITRE|nonestr }} {{ SRCNF.0.0.DESCRIPTION|nonestr }}">{% endif %}
     Né le {{ Femelle.0.DATEN|nonestr }}<BR>à({{ Femelle.0.COMMUNEN|nonestr }})<BR>
     {% if SRCDF.0.0 %} <img src={% static "img/INFO.gif" %} width="12" height="12" title="{{ SRCDF.0.0.TITRE|nonestr }} {{ SRCDF.0.0.DESCRIPTION|nonestr }}">{% endif %}
-    Décédé le {{ Femelle.0.DATED|nonestr }}<BR>à({{ Femelle.0.COMMUNED|nonestr }})<BR>Profession de <BR>Autres Unions :
+    Décédé le {{ Femelle.0.DATED|nonestr }}<BR>à({{ Femelle.0.COMMUNED|nonestr }})<BR>Profession de{{ Femelle.0.PROF|nonestr }}<BR>Autres Unions :
 {%  for enf in ListeFMar %}
 
     <a  class="whitewine" href="affArbre?CODEF={{ enf }}" > {{forloop.counter0|add:"1"}}</a>;
