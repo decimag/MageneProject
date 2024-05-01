@@ -6,162 +6,77 @@
 {% block content %}
 {% load static %}
  <br>
-  <p class="title">Quelques personnages s'étant remarqués ...</p>
+  <p class="title">Quelques personnages ou familles s'étant remarqués ...</p>
   <BR><BR><BR><BR>
   <p align="center"><a href="#ancre1">Marcel Pagnol, écrivain et cinéaste français</a></P>
+     <P ALIGN="center"><a href="#ancre4">Albert Camus, écrivain, dramaturge</a> </P>
    <p align="center"><a href="#ancre2">Jean Siffrein Maury, Cardinal, participa à l'histoire de la Révolution</a></P>
    <p align="center"><a href="#ancre3">Gustave Bouillaud, Photographe ayant participé au progrès technique de la photographie </a></P>
+   <p align="center"><a href="#ancre5">Elisa Lamotte, Actrice dans les années 1950 </a></P>
+    <p align="center"><a href="#ancre6">Nicolas de Montfort, comte de Campobasso, et branche royale </a></P>
+    <p align="center"><a href="#ancre7">Famille Barraud de fondeurs de cloches</a></P>
+    <p align="center"><a href="#ancre7">Famille Pâtureau Maîtres moulinier à foulons</a></P>
   <br>
   <br><BR><BR>
   <BR><BR>
   <BR><BR>
    <hr></hr>
-  <div id="picture" >
+    <div id="picture" >
   <img src={% static "img/pagnol.jpeg" %}>
   </div>
-  <p class="celebnom"><A name="ancre1">Marcel Pagnol</A></p>
-  <br>
-  <br>
+        {% include 'Pagnol.html' %}
 
-  <p class="celebind">
-  Marcel Pagnol, écrivain et cinéaste français (Aubagne 1895-Paris 1974), il fut reçu à l'académie française en 1946.
-  </p>
-  <br>
-  <br>
-  <u color="#6d6d6d"> Son ascendance :</u>
-  <br>
-  <p class="celebind">
-       Côté paternel, les origines au moins depuis le début XVII sont ancrées en Provence et notamment à Valréas dans le Vaucluse.
-       </p>
-
-         <p class="celebind">
-  Ses grands parents sont originaires de Valréas ainsi que la plupart de leurs ascendants depuis plusieurs siècles.
-   Les arrière et arrière arrière grands parents de Marcel étaient armuriers à Valréas, son grand père André changea de direction puisqu'il
-  fût Compagnon du Devoir, tailleur de pierre. Sa réputation de "Maître appareilleur de pierres" lui vaudra d'être chargé de resculpter la façade de l'Hôtel de Ville détruite en 1871 à Paris.<br>
-  </p>
-    <p class="celebind">
-  André qui a souffert de ne savoir lire et écrire souhaita que ses six enfants soient instituteurs, ce fût le cas. André savait qu'avec la profession d'instituteur ses enfants seraient bien considérés,
-   mais il devait savoir également à quel point la culture était importante, certainement la plus grande des richesses. Mr Jean Bernard qui prît la succession de Marcel
-  Pagnol, à l'académie française, en parla éminemment bien lors de son discours prononcé dans la Séance publique à son arrivée en hommage à Marcel Pagnol, en voici un extrait :
-  </p>
-  <p class="celebcita">
-  "De nombreuses études ont été consacrées aux instituteurs français, au rôle qu’ils ont joué au début de ce siècle, à leur valeur pédagogique (dont tous ceux qui sont passés par l’école communale peuvent porter témoignage), à leur courage, à leur simplicité, au conflit avec le curé, d’abord rigide, puis plus souple, devenu fraternel, presque affectueux déjà au temps de Joseph et de Jules, de Manon des Sources, de la Femme du Boulanger.
-  <br>
-
-     Les fils d’instituteurs n’ont pas, semble-t-il, été l’objet de la même attention. On les trouve pourtant nombreux dans les Universités, les Académies. Le même jour, en 1946, 1’Académie française élit le fils d’Henri Farigoule, instituteur à Montmartre, le fils de Joseph Pagnol, instituteur à Marseille. Ces fils d’instituteurs assument dans la fonction publique de hautes responsabilités et parfois la plus haute. Ils sont certes très divers. Mais certaines vertus, certains traits leur sont communs : le sens profond du bien public, la confiance accordée aux vertus de l’homme, une confiance plus grande encore accordée à la science, seule capable d’aborder et de résoudre les grands problèmes, le respect des valeurs de culture, le respect des humbles et le respect des hiérarchies, le respect du père instituteur. "
-     </p>
-     <br>
-   <p class="celebind">
-      Côté maternel, sa mère Augustine Lansot est née à Marseille, mais son père est né à Lorient. Le grand père Lansot de Marcel était également compagnon, mécanicien de marine. Sa profession le faisait beaucoup voyager, et de passage à Marseille il décida d'y résider. Il épousa une Marseillaise Paulin Gounet. Ainsi Augustine a des origines provençales mais de part son père également Bretonnes et Normandes.
-        </p>
+  <hr></hr>
+  <div id="picture">
+  <div id="picture" >
+  <img src={% static "img/Camus.jpg" %}>
+  </div>
+        {% include 'Camus.html' %}
 
   <hr></hr>
   <div id="picture">
   <img src={% static "img/Cardinal.jpg" %}>
   </div>
-  <p class="celebnom"><A name="ancre2">Jean Siffrein Maury</A></p>
-   <br>
-  <br>
-  <p class="celebind">
-  Jean-Siffrein, né à Valréas le 26 juin 1746, mort le 12 mai 1817 à Rome. Prédicateur distingué, archevêque de Nicée, puis évêque de Corneto et évêque de Montefiascone, archevêque de Paris (1810-1814), membre de l'Institut. Il participa à la Révolution Française en tant que chef de la droite contre révolutionnaire.
-        </p>
-
-
-  <br>
-  <br>
-  <p class="celebind">
-  L'abbé Maury est un personnage haut en couleur, fils de cordonnier il a gravi les échelons jusqu'à devenir un des personnages les plus célèbres de la révolution française.
-  Un de ses plus grands talents est sa grandiloquence. A ce titre, il est intervenu de nombreuses fois devant l'assemblée en tant que député pour défendre la monarchie et le clergé.
-  De ce fait, il fut la cible privilégiée des révolutionnaires et notamment se fit ridiculiser régulièrement dans des journaux révolutionnaires pamphlétaires.
-  Après la constituante, il émigra en Italie, fut nommé Archevêque de Nicée et cardinal en 1794.
-  Souhaitant rentrer en France il rallia l'empereur et rentra en France en 1806 provoquant les foudres du pape Pie VII. La monarchie de retour avec Louis XVIII provoqua sa chute. En effet,
-  Louis XVIII chassa le traitre. Le pape Pie VII le laissa emprisonné au château de Saint-Ange. Il mourra un peu plus tard dans un couvent en 1817.
-
-
-
-
-  </p>
+     {% include 'Siffren.html' %}
     <hr></hr>
   <div id="picture">
-  <img src={% static "img/frereAJ.jpg" %}  height="200" width="125">
+  <img src={% static "img/Bouillaud.jpg" %}  height="200" width="125">
   </div>
-  <p class="celebnom"><A name="ancre3">Gustave Bouillaud</A></p>
-   <br>
-  <br>
-  <p class="celebind">
-     Gustave, né à Vouzan (Charente), le 20 mars 1852, Photographe
-        </p>
 
 
-  <br>
-  <br>
-  <p class="celebind">
- Mon arrière grand-père Augustin Jean Bouillaud, nourrissait toute ma curiosité. En effet en 1890, il était photographe à Brive,
- puis « photographe ambulant » à Reims...
- La photographie étant inventée seulement 50 ans  plus tôt, cela me paraissait assez formidable que mon aïeul, issu d’une famille paysanne charentaise,
- décide de changer radicalement de voie pour devenir photographe et donc de partir un peu à l’aventure.
-
-
-  </p>
-  <br>
-    <p class="celebind">
-  Sachant cela, je ne voulais pas en rester là.
-  Ainsi, je me suis lancé à la recherche hypothétique, sur internet, de photos prises par mon arrière grand-père. Longtemps, ma recherche resta infructueuse,
-  je tombais souvent sur un Bouillaud Gustave de Macon, mais à priori rien à voir avec Augustin Jean.
-  Jusqu’au jour où, par hasard, dans un résumé de site internet, je lis : </p>
-    <p class="celebcita">
-           « Bouillaud Gustave né à Vouzan Charente ».
-
-    </p>
-<p class="celebind">
-  Et là, je me dis que mon arrière grand père né à Vouzan également, devait forcément connaitre ce Gustave.
-  Après la récupération de l'acte de naissance de Gustave, les soupçons se confirmèrent : Augustin Jean et Gustave étaient frères.
-  Gustave qui était prénommé Augustin sur l’acte fut l’ainé de mon arrière grand père de 11 ans.
-  C’était donc l’initiateur, Augustin Jean n’a fait que suivre son grand frère.
-  J'ai alors recherché plus d’informations sur mon arrière grand oncle ; je ne fus pas déçu.
-</p>
-   <p class="celebind">
-  Gustave s’est installé comme photographe à Macon entre 1882 et 1886 jusqu’à sa mort en 1924.
-  Il possédait 3 studios à Macon (4 rue de la Paroisse, 31 rue de la Barre, 19 quai du Nord).  </p>
-  <center>
+    {% include 'BouillaudG1.html' %}
+ 
   <img src={% static "img/affiche1.jpg" %} height="100" width="200"></img>
-   <img src={% static "img/affiche2.jpg" %}  height="200" width="100"></img></center><br> <p class="celebind">
-  Gustave, participa au développement technique de la photographie comme en témoigne la présentation faite en 1906 lors de
-  sa nomination à l’académie de Mâcon (société des arts, sciences, belles-lettres et d’agriculture).
-    </p>
-   <p class="celebcita"> La présentation de  M Dureault et M Pellorce : "Mr Bouillaud (Gustave, né à Vouzan (Charente), le 20 mars 1852,
-   est le photographe mâconnais dont le talent est fait d'art et de science. Parmi de nombreuses innovations heureuses, il a inventé notamment
-   un appareil et un procédé photographique qui permettent d'opérer en tout temps, avec un succès assuré, à la lumière artificielle,
-   en s'affranchissant de l'aléatoire complicité du soleil jusqu'ici l'indispensable collaborateur du photographe M. Bouillaud a rendu indiscutablement
-   de très important services à la photographie."
-   </p> <p class="celebcita">
-  Source :Annales de l’Académie de Mâcon (1906 (SER3, T11)
-  </p>
-     <p class="celebind">
-  L’expression « d’art et de science » définissant son talent est juste car il n’était pas seulement un technicien, il recherchait,
-  je pense, avant tout la perfection esthétique des photos. En témoigne les nombreux prix reçus pour ces photos : </p>
-<p class="celebcita">
-Médailles d’argent, FLORENCE 1887</p><p class="celebcita">
-Médailles d’argent, PARIS 1887</p><p class="celebcita">
-Médailles d’argent, BARCELONE 1888</p><p class="celebcita">
-Médailles d’argent, PARIS 1889(exposition universelle)</p><center><img src={% static "img/paris1889.jpg" %}  height="200" width="131"></img></center><br>
-   <p class="celebind">
-Le rapport du Jury de l’exposition de 1889 (celle pour laquelle fut construite la tour Eiffel) rend hommage au talent de Gustave.
-
-Voici le commentaire de Léon Vidal le rapporteur de l’exposition de 1889.</p>
-</p>
-<p class="celebcita">"M.Bouillaud (Gustave), à Macon, est au nombre de ceux qui savent le mieux tirer parti de
-ce mode d'impression pour l'appliquer à des oeuvres empreintes d'un cachet artistique tout spécial. Les sujets qu'il a exposés sont tous au charbon;
-ils sont d'une délicatesse de rendu qui permet de les classer dans les premiers rangs des études d'art accomplies
-à l'aide de la photographie." </p>
-<p class="celebind">
-Gustave est mort en 1924 à Mâcon à 72 ans. Sa vie fut consacrée à la photographie.
- Il fut à la fois technicien (plusieurs brevets d'invention en témoignent) et artiste.
-
- Mais, il me reste  des interrogations sur son parcours : Pourquoi s’est-il installé à Mâcon si loin de la
-Charente ? Un célèbre Médecin Bouillaud, né également en Charente était son contemporain,
-il s’agit de Jean Baptiste Bouillaud ; se connaissaient-ils ?
-</p>
+   <img src={% static "img/affiche2.jpg" %}  height="200" width="100"></img></center>
+    {% include 'BouillaudG2.html' %}
+    <center><img src={% static "img/paris1889.jpg" %}  height="200" width="131"></img></center><br>
+ 
+   {% include 'BouillaudG3.html' %}
+      <hr></hr>
+   <div id="picture">
+  <img src={% static "img/Elisa Lamotte.jpg" %}>
+  </div>
+     {% include 'Lamotte.html' %}
+     <hr></hr>
+  <div id="picture">
+  <img src={% static "img/Monforte.jpg" %}  height="200" width="125">
+  </div>
 
 
+    {% include 'Montfort.html' %}
+ 
+  <img src={% static "img/Blanche de Castille.jpg" %} height="100" width="200"></img>
+  <img src={% static "img/Aliénor.jpg" %} height="100" width="200"></img>
+  <img src={% static "img/Charlemagne.jpg" %} height="100" width="200"></img>
+  {% include 'Montfort2.html' %}
+   <hr></hr>
+   <div id="picture">
+  <img src={% static "img/Cloches.jpg" %} height="200" width="125">
+  </div>
+     {% include 'Barraud.html' %}
+   <hr></hr>
+   <div id="picture">
+  <img src={% static "img/moulins.png" %} height="100" width="200">
+  </div>
+     {% include 'Patureau.html' %}
 {% endblock %}

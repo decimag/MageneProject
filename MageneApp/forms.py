@@ -2,6 +2,8 @@ from django import forms
 from MageneApp.models import ACTES,GENUSERS_PROFIL
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm,PasswordResetForm
+from captcha.fields import CaptchaField
+
 
 
 class LoginForm(forms.Form):
@@ -11,9 +13,10 @@ class LoginForm(forms.Form):
 
 class RegisterForm(UserCreationForm):
     username=forms.CharField(label="login")
+    captcha = CaptchaField()
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2','last_name','first_name']
+        fields = ['username', 'email', 'password1', 'password2','last_name','first_name','captcha']
 
 class ResetPwd(PasswordResetForm):
     email = forms.CharField(label="email")

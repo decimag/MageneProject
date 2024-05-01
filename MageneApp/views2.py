@@ -82,7 +82,7 @@ def sign_up(request):
             login(request, user)
             return redirect('/loginPlus')
         else:
-            return render(request, 'registration/register.html', {'form': form})
+            return render(request, 'registration/register.html', {'form': form,'formProfil': formProfil})
 
 def resetpwd(request):
     form = PasswordResetForm()

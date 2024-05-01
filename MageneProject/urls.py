@@ -52,6 +52,9 @@ urlpatterns = [
     path('download_file', views4.download_file,name='download_file'),
     path('profil', views2.profil,name='profil'),
     path('confirmation', views2.confirm_deletion,name='confirmation'),
+    path('captcha/', include('captcha.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
 
